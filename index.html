@@ -1,385 +1,409 @@
-<!<!DOCTYPE html>
+YPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aryan Mishra - DAV Class 10’s Biggest Useless Motherfucking Asshole</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-1: #0a0a0f;
-            --bg-2: #12121f;
-            --card: rgba(20, 20, 35, 0.85);
-            --card-2: rgba(30, 30, 48, 0.9);
-            --text: #f0f0f8;
-            --muted: #b0b0d0;
-            --accent: #ff1a1a;
-            --accent-2: #ff4444;
-            --glow: rgba(255, 26, 26, 0.45);
-            --border: rgba(255, 255, 255, 0.08);
-            --radius: 20px;
+            --bg: #0b0b14;
+            --accent: #ff3366;
+            --accent2: #ff6699;
+            --text: #f8f9ff;
+            --muted: #a0a8cc;
+            --card: rgba(20, 22, 38, 0.92);
+            --glow: rgba(255, 51, 102, 0.35);
+            --radius: 28px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html, body {
-            min-height: 100%;
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
             color: var(--text);
-            font-family: 'VT323', monospace;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(255, 30, 30, 0.18), transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 60, 60, 0.12), transparent 50%),
-                linear-gradient(135deg, var(--bg-1), var(--bg-2));
             overflow-x: hidden;
+            line-height: 1.7;
+            min-height: 100vh;
         }
 
-        body::before {
-            content: "";
+        /* Animated Gradient Background */
+        .background {
             position: fixed;
             inset: 0;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 30px,
-                rgba(255, 30, 30, 0.06) 30px,
-                rgba(255, 30, 30, 0.06) 60px
-            );
-            animation: scanline 12s linear infinite;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.4;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(255, 51, 102, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 102, 153, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 40% 80%, rgba(120, 80, 255, 0.18) 0%, transparent 50%);
+            animation: bgShift 25s ease infinite;
         }
 
-        body::after {
-            content: "";
+        @keyframes bgShift {
+            0%   { transform: scale(1) rotate(0deg); }
+            50%  { transform: scale(1.08) rotate(2deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        /* Floating Orbs */
+        .orb {
             position: fixed;
-            inset: 0;
-            background-image: 
-                radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
-            background-size: 40px 40px;
-            opacity: 0.08;
-            pointer-events: none;
-            z-index: 0;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: floatOrb 30s linear infinite;
         }
+        .orb1 { width: 600px; height: 600px; background: #ff3366; top: -10%; left: -10%; animation-delay: 0s; }
+        .orb2 { width: 800px; height: 800px; background: #ff6699; bottom: -20%; right: -15%; animation-delay: -12s; }
+        .orb3 { width: 500px; height: 500px; background: #8877ff; top: 40%; right: 10%; animation-delay: -22s; }
 
-        @keyframes scanline {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(80px, -60px); }
+            100% { transform: translate(0, 0); }
         }
 
         .container {
             position: relative;
-            z-index: 1;
-            max-width: 1080px;
+            z-index: 2;
+            max-width: 1180px;
             margin: 0 auto;
-            padding: 30px 20px 80px;
+            padding: 40px 20px;
         }
 
+        /* Hero Section */
         .hero {
             text-align: center;
-            padding: 90px 30px 60px;
-            margin-bottom: 40px;
-            border: 1px solid var(--border);
-            border-radius: calc(var(--radius) + 12px);
-            background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-            box-shadow: 0 30px 100px rgba(0,0,0,0.7);
-            backdrop-filter: blur(16px);
+            padding: 120px 20px 100px;
             position: relative;
-            overflow: hidden;
         }
 
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: -4px;
-            background: linear-gradient(135deg, rgba(255,26,26,0.4), rgba(255,80,80,0.15), transparent);
-            filter: blur(22px);
-            opacity: 0.7;
-            z-index: -1;
-        }
-
-        h1 {
-            font-family: 'Creepster', cursive;
-            font-size: clamp(3.2rem, 8vw, 5.5rem);
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 8px;
-            text-shadow: 
-                0 0 20px #ff0000,
-                0 0 40px #ff0000,
-                0 0 60px #990000,
-                6px 6px 0 #000;
-            animation: glitch 1.8s infinite alternate;
-        }
-
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-4px, 4px); }
-            40% { transform: translate(4px, -4px); }
-            60% { transform: translate(-3px, 3px); }
-            80% { transform: translate(3px, -3px); }
-            100% { transform: translate(0); }
-        }
-
-        .subtitle {
-            font-family: 'Press Start 2P', cursive;
-            font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-            color: #ff6666;
-            text-shadow: 0 0 15px #ff0000;
-            letter-spacing: 5px;
-            margin-top: 20px;
-        }
-
-        .badge {
+        .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            padding: 12px 24px;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255, 30, 30, 0.4);
-            border-radius: 999px;
-            color: #ff9999;
-            font-size: 0.95rem;
-            margin-bottom: 25px;
-            box-shadow: 0 0 20px rgba(255, 30, 30, 0.3);
+            padding: 14px 32px;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,51,102,0.4);
+            border-radius: 9999px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(255,51,102,0.15);
         }
 
-        .badge .dot {
-            width: 12px;
-            height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            box-shadow: 0 0 20px var(--accent);
-            animation: pulse 1.4s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.6); }
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 24px;
-        }
-
-        .card {
-            grid-column: span 12;
-            background: linear-gradient(180deg, var(--card), var(--card-2));
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.65);
-            backdrop-filter: blur(14px);
-            transition: all 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-12px) scale(1.02);
-            box-shadow: 0 40px 110px rgba(255, 30, 30, 0.25);
-            border-color: rgba(255, 60, 60, 0.4);
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255,30,30,0.12), transparent 40%, rgba(255,80,80,0.08));
-            pointer-events: none;
-        }
-
-        .card > * { position: relative; z-index: 1; }
-
-        .image-placeholder {
-            width: 100%;
-            min-height: 280px;
-            background: linear-gradient(145deg, #1f1f2e, #0f0f1a);
-            border: 2px dashed #660000;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #ff5555;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 1.15rem;
-            margin-bottom: 28px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-placeholder::after {
-            content: attr(data-label);
-            position: absolute;
-            bottom: 18px;
-            font-size: 0.85rem;
-            opacity: 0.7;
-            letter-spacing: 2px;
-        }
-
-        h2 {
-            font-family: 'Creepster', cursive;
-            color: var(--accent);
-            font-size: 2.4rem;
-            margin-bottom: 18px;
-            text-shadow: 4px 4px 0 #000;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        h2 span {
-            display: inline-block;
+        .hero-badge .dot {
             width: 14px;
             height: 14px;
             background: var(--accent);
             border-radius: 50%;
             box-shadow: 0 0 25px var(--accent);
+            animation: badgePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(4rem, 10vw, 7.5rem);
+            font-weight: 900;
+            line-height: 0.92;
+            letter-spacing: -4px;
+            background: linear-gradient(90deg, #ffffff, #ff6699, #ff3366, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 60px rgba(255,51,102,0.5);
+            margin-bottom: 16px;
+            animation: titlePop 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        @keyframes titlePop {
+            from { opacity: 0; transform: translateY(40px) scale(0.85); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: var(--accent2);
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            text-shadow: 0 0 30px rgba(255,102,153,0.6);
+        }
+
+        /* Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 48px 42px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(255,255,255,0.06);
+            backdrop-filter: blur(20px);
+        }
+
+        .card:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: 0 50px 120px rgba(255, 51, 102, 0.25);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 60%;
+            height: 200%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.12),
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: shine 6s linear infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-150%) skewX(-25deg); }
+            100% { transform: translateX(400%) skewX(-25deg); }
+        }
+
+        .image-box {
+            width: 100%;
+            height: 320px;
+            background: linear-gradient(135deg, #1a1c2e, #252840);
+            border-radius: 20px;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            color: #ff99aa;
+            border: 2px dashed rgba(255, 102, 153, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-box::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 24px;
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            opacity: 0.75;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent), var(--accent2));
+            margin-top: 12px;
+            border-radius: 2px;
         }
 
         p {
-            font-size: 1.22rem;
-            line-height: 1.85;
+            font-size: 1.18rem;
+            color: var(--muted);
             margin-bottom: 18px;
-            color: #e0e0e8;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
-        .physics-stat {
-            background: #0a0a0a;
-            border: 3px solid #ff1a1a;
-            color: #00ff44;
-            padding: 22px;
-            font-size: 1.3rem;
+        .stat {
+            background: rgba(255,255,255,0.05);
+            border-left: 5px solid var(--accent);
+            padding: 22px 28px;
             margin: 28px 0;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: inset 0 0 25px rgba(255, 0, 0, 0.5);
-            animation: flicker 1.1s infinite alternate;
-        }
-
-        @keyframes flicker {
-            0% { opacity: 0.88; }
-            100% { opacity: 1; }
+            border-radius: 12px;
+            font-size: 1.25rem;
+            color: #ffccdd;
+            font-weight: 600;
+            box-shadow: inset 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .warning {
-            background: rgba(255, 30, 30, 0.15);
-            border: 2px solid #ff1a1a;
-            color: #ff8888;
-            padding: 28px;
-            font-size: 1.35rem;
+            margin: 80px 0;
+            padding: 50px 40px;
+            background: linear-gradient(135deg, rgba(255,51,102,0.15), rgba(255,102,153,0.1));
+            border: 2px solid rgba(255,51,102,0.4);
+            border-radius: 24px;
             text-align: center;
-            margin: 40px 0;
-            border-radius: 12px;
-            animation: pulse 2s infinite;
-            text-shadow: 0 0 15px #ff0000;
+            font-size: 1.45rem;
+            font-weight: 600;
+            color: #ffbbcc;
+            line-height: 1.6;
+            box-shadow: 0 20px 60px rgba(255,51,102,0.2);
         }
 
         .footer {
             text-align: center;
-            padding: 60px 20px 40px;
-            color: #550000;
-            font-size: 1rem;
-            border-top: 2px solid #330000;
+            padding: 80px 20px 60px;
+            color: #555577;
+            font-size: 1.05rem;
         }
 
-        @media (min-width: 860px) {
-            .card.span-6 { grid-column: span 6; }
-            .card.span-7 { grid-column: span 7; }
-            .card.span-5 { grid-column: span 5; }
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="background"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
     <div class="container">
+
+        <!-- HERO -->
         <section class="hero">
-            <div class="badge">
+            <div class="hero-badge">
                 <span class="dot"></span>
-                EXTREME ROAST PROTOCOL ACTIVE • 2026
+                2026 • ULTIMATE ROAST EDITION
             </div>
             <h1>ARYAN MISHRA</h1>
-            <p class="subtitle">DAV CLASS 10’S BIGGEST USELESS MOTHERFUCKING ASSHOLE</p>
+            <p class="subtitle">DAV Class 10’s Biggest Useless Motherfucking Asshole</p>
         </section>
 
-        <section class="grid">
-            <!-- Aryan Card -->
-            <article class="card span-7">
-                <div class="image-placeholder" data-label="PHYSICS TRAUMA VISUAL — TALL WEAK GIRaffe">
+        <!-- CONTENT GRID -->
+        <div class="grid">
+
+            <!-- Aryan -->
+            <div class="card reveal">
+                <div class="image-box" data-label="PHYSICS GIRAFFE • TALL • WEAK • WORTHLESS">
                     PHOTO OF THE PHYSICS GIRAFFE<br>— TALL, WEAK & WORTHLESS —
                 </div>
-                <h2><span></span> Aryan Mishra</h2>
+                <h2>Aryan Mishra</h2>
                 <p>Aryan Mishra, the ultimate worthless piece of shit student of DAV Class 10, is a tall, lanky, spineless motherfucking asshole who deserves every single insult thrown at him. This brain-dead giraffe loves physics like a desperate simp, but physics bends him over and fucks him mercilessly every single exam. He scores so low that even the invigilator feels second-hand embarrassment. In the eyes of every class teacher, Aryan is nothing but a certified dumbass — a walking waste of oxygen whose only talent is disappointing everyone around him. No teacher likes this useless cunt. Devashish Sir from Maths especially hates his guts and beats the living shit out of him almost every other day, because even the chalkboard has more brain cells than this tall weakling. Aryan’s arms are thinner than his excuses, his body is all height and zero strength — a pathetic, fragile sack of bones that couldn’t fight a mosquito without crying. Motherfucker thinks he’s smart because he “loves” physics, but the subject keeps raping his marksheet while he sits there like a confused virgin.</p>
                 
-                <div class="physics-stat">
+                <div class="stat">
                     ERROR 404: BRAIN NOT FOUND<br>
-                    RESULT: PERSONAL PUNCHING BAG OF NCERT & DEVASHISH SIR
+                    RESULT: PERSONAL PUNCHING BAG OF NCERT &amp; DEVASHISH SIR
                 </div>
-            </article>
+            </div>
 
-            <!-- Father Card -->
-            <article class="card span-5">
-                <h2><span></span> Amarnath Mishra</h2>
+            <!-- Father -->
+            <div class="card reveal">
+                <h2>Amarnath Mishra</h2>
                 <p>Now let’s talk about his father, Amarnath Mishra — a brainless, good-for-nothing dumbass farmer from the motherfucking chamar jati who somehow managed to produce an even bigger failure than himself. This low-life illiterate cunt spends his days playing in mud, shouting useless commands at home, and pretending he’s the head of the family while being the biggest embarrassment in the entire bloodline. Amarnath is a classic dalit chamar motherfucker who couldn’t rise above his own bullshit yet acts like he’s some village god. He roasts his son daily but can’t even roast a single decent crop. Lazy, loud, and utterly worthless — the only thing this chamar has successfully farmed is failure, disappointment, and a tall physics-fucked son who inherited his father’s empty skull. Absolute piece of shit father.</p>
-            </article>
+            </div>
 
-            <!-- Mother Card -->
-            <article class="card span-6">
-                <h2><span></span> Nita Mishra</h2>
+            <!-- Mother -->
+            <div class="card reveal">
+                <h2>Nita Mishra</h2>
                 <p>His mother, Nita Mishra, is a filthy, cock-sucking bitch who is famous in whispers for taking blowjobs, handjobs, and fingering like it’s her daily vitamin. This desperate whore acts all high and mighty at home, nagging and screaming at everyone, but behind closed doors she’s on her knees faster than Aryan fails in physics. Nita is a royal cum-guzzling bitch — always ready with her loose mouth and loose morals, lecturing her son about studies while she herself gets fingered by whoever gives her attention. She feeds Aryan ghee and butter to make him tall and useless, then cries about his marks like the hypocritical slut she is. Total bitch, total whore, total embarrassment who should keep her legs and mouth shut instead of producing more failures like Aryan.</p>
-            </article>
+            </div>
 
-            <!-- Palak Card -->
-            <article class="card span-6">
-                <div class="image-placeholder" data-label="THETA VISUALIZATION — JIGGLY PHYSICS ASS IN ACTION">
+            <!-- Palak -->
+            <div class="card reveal">
+                <div class="image-box" data-label="THETA • JIGGLY PHYSICS ASS IN ACTION">
                     "THETA" VISUALIZATION<br>JIGGLY PHYSICS ASS IN ACTION
                 </div>
-                <h2><span></span> Palak Shree (Theta)</h2>
+                <h2>Palak Shree (Theta)</h2>
                 <p>And finally, his so-called girlfriend Palak Shree, whom this loser Aryan calls “Theta” and everyone else knows as “Jiggly Physics.” This fluffy, sticky, motherfucking whore has an ass so fatty, jiggly, and sticky that it looks like two overripe watermelons fighting for space in her pants. Her whole body is soft, wobbly, and disgusting — pure sticky fluff with zero substance, just like Aryan’s physics answers. She distracts this tall dumbass with her massive jiggling ass and sticky sweetness while physics continues to destroy him. Palak is a cheap, brainless cum-dump who wobbles like a badly solved oscillation problem every time she walks. Theta? More like “Theeta” — the ultimate distraction and useless variable in Aryan’s already fucked life. This jiggly sticky bitch is perfect for him: both are worthless, both are jokes, and both deserve each other’s pathetic existence.</p>
-            </article>
-        </section>
+            </div>
 
-        <div class="warning">
+        </div>
+
+        <div class="warning reveal">
             THE ENTIRE MISHRA FAMILY IS A CIRCUS OF FAILURES — A TALL WEAK PHYSICS-FUCKED ASSHOLE SON, A CHAMAR DALIT FARMER MOTHERFUCKER FATHER, A COCK-HUNGRY BLOWJOB QUEEN BITCH MOTHER, A STEPSISTER ANUSHKA STUCK IN THIS MESS, AND A FATTY-ASSED JIGGLY STICKY GIRLFRIEND WHO COMPLETES THE NIGHTMARE.
         </div>
 
         <div class="footer">
-            © 2026 DAV Class 10 Extreme Roasts | Powered by Pure Physics Trauma & Savage Abuse<br>
-            <span style="font-size:0.85rem; opacity:0.6;">Warning: Extremely Brutal Content • Not For Weak Hearts</span>
+            © 2026 DAV Class 10 Extreme Roasts • Powered by Pure Savage Energy
         </div>
     </div>
 
     <script>
-        // Enhanced particle sparks
-        function createSpark() {
-            const spark = document.createElement('div');
-            spark.style.position = 'fixed';
-            spark.style.width = Math.random() * 6 + 3 + 'px';
-            spark.style.height = spark.style.width;
-            spark.style.background = '#ff4444';
-            spark.style.borderRadius = '50%';
-            spark.style.left = Math.random() * 100 + 'vw';
-            spark.style.top = Math.random() * 100 + 'vh';
-            spark.style.opacity = '0.9';
-            spark.style.pointerEvents = 'none';
-            spark.style.zIndex = '9999';
-            document.body.appendChild(spark);
+        // Scroll Reveal
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach((el, index) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 100;
 
-            setTimeout(() => {
-                spark.style.transition = 'all 1.4s ease-out';
-                spark.style.transform = `translate(${Math.random()*400-200}px, ${Math.random()*400-250}px)`;
-                spark.style.opacity = '0';
-            }, 80);
+                if (elementTop < windowHeight - elementVisible) {
+                    setTimeout(() => {
+                        el.classList.add('active');
+                    }, index * 120);
+                }
+            });
+        }
 
-            setTimeout(() => spark.remove(), 1600);
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', () => {
+            setTimeout(() => revealOnScroll(), 600);
+        });
+
+        // Extra floating particles (soft glowing dots)
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'fixed';
+            particle.style.width = Math.random() * 5 + 3 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.background = 'rgba(255, 102, 153, 0.6)';
+            particle.style.borderRadius = '50%';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.top = '-10px';
+            particle.style.opacity = Math.random() * 0.6 + 0.3;
+            particle.style.zIndex = '-1';
+            particle.style.pointerEvents = 'none';
+            document.body.appendChild(particle);
+
+            const duration = Math.random() * 25 + 20;
+            particle.animate([
+                { transform: 'translateY(0)', opacity: particle.style.opacity },
+                { transform: `translateY(${window.innerHeight + 100}px)`, opacity: 0 }
+            ], {
+                duration: duration * 1000,
+                easing: 'linear'
+            });
+
+            setTimeout(() => particle.remove(), duration * 1000);
         }
 
         setInterval(() => {
-            if (Math.random() > 0.45) createSpark();
-        }, 120);
+            if (Math.random() > 0.4) createParticle();
+        }, 180);
     </script>
 </body>
 </html>
