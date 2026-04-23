@@ -1,4 +1,4 @@
-YPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,8 +12,7 @@ YPE html>
             --accent2: #ff6699;
             --text: #f8f9ff;
             --muted: #a0a8cc;
-            --card: rgba(20, 22, 38, 0.92);
-            --glow: rgba(255, 51, 102, 0.35);
+            --card: rgba(20, 22, 38, 0.95);
             --radius: 28px;
         }
 
@@ -24,263 +23,203 @@ YPE html>
             background: var(--bg);
             color: var(--text);
             overflow-x: hidden;
-            line-height: 1.7;
             min-height: 100vh;
         }
 
-        /* Animated Gradient Background */
         .background {
             position: fixed;
             inset: 0;
             z-index: -2;
             background: 
                 radial-gradient(circle at 30% 20%, rgba(255, 51, 102, 0.25) 0%, transparent 50%),
-                radial-gradient(circle at 70% 60%, rgba(255, 102, 153, 0.22) 0%, transparent 55%),
-                radial-gradient(circle at 40% 80%, rgba(120, 80, 255, 0.18) 0%, transparent 50%);
-            animation: bgShift 25s ease infinite;
+                radial-gradient(circle at 70% 60%, rgba(255, 102, 153, 0.22) 0%, transparent 55%);
+            animation: bgShift 28s ease infinite;
         }
 
         @keyframes bgShift {
-            0%   { transform: scale(1) rotate(0deg); }
-            50%  { transform: scale(1.08) rotate(2deg); }
-            100% { transform: scale(1) rotate(0deg); }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.12); }
         }
 
-        /* Floating Orbs */
         .orb {
             position: fixed;
             border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.15;
+            filter: blur(90px);
+            opacity: 0.12;
             z-index: -1;
-            animation: floatOrb 30s linear infinite;
+            animation: floatOrb 35s linear infinite;
         }
-        .orb1 { width: 600px; height: 600px; background: #ff3366; top: -10%; left: -10%; animation-delay: 0s; }
-        .orb2 { width: 800px; height: 800px; background: #ff6699; bottom: -20%; right: -15%; animation-delay: -12s; }
-        .orb3 { width: 500px; height: 500px; background: #8877ff; top: 40%; right: 10%; animation-delay: -22s; }
+        .orb1 { width: 700px; height: 700px; background: #ff3366; top: -15%; left: -10%; }
+        .orb2 { width: 900px; height: 900px; background: #ff6699; bottom: -25%; right: -20%; animation-delay: -15s; }
 
         @keyframes floatOrb {
             0% { transform: translate(0, 0); }
-            50% { transform: translate(80px, -60px); }
+            50% { transform: translate(120px, -80px); }
             100% { transform: translate(0, 0); }
         }
 
         .container {
             position: relative;
             z-index: 2;
-            max-width: 1180px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             text-align: center;
-            padding: 120px 20px 100px;
-            position: relative;
+            padding: 100px 20px 80px;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            padding: 14px 32px;
+            padding: 14px 34px;
             background: rgba(255,255,255,0.07);
             border: 1px solid rgba(255,51,102,0.4);
             border-radius: 9999px;
-            font-size: 1.05rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            margin-bottom: 24px;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
             backdrop-filter: blur(12px);
-            box-shadow: 0 10px 30px rgba(255,51,102,0.15);
         }
 
         .hero-badge .dot {
-            width: 14px;
-            height: 14px;
+            width: 14px; height: 14px;
             background: var(--accent);
             border-radius: 50%;
             box-shadow: 0 0 25px var(--accent);
-            animation: badgePulse 2s ease-in-out infinite;
-        }
-
-        @keyframes badgePulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.4); }
+            animation: pulse 2s infinite;
         }
 
         h1 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(4rem, 10vw, 7.5rem);
+            font-size: clamp(4.2rem, 9vw, 7.8rem);
             font-weight: 900;
-            line-height: 0.92;
-            letter-spacing: -4px;
-            background: linear-gradient(90deg, #ffffff, #ff6699, #ff3366, #ffffff);
+            line-height: 0.9;
+            letter-spacing: -5px;
+            background: linear-gradient(90deg, #fff, #ff6699, #ff3366);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 0 60px rgba(255,51,102,0.5);
-            margin-bottom: 16px;
-            animation: titlePop 1.2s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        @keyframes titlePop {
-            from { opacity: 0; transform: translateY(40px) scale(0.85); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
+            margin-bottom: 12px;
         }
 
         .subtitle {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-size: clamp(1.7rem, 4.5vw, 2.6rem);
             color: var(--accent2);
             font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            text-shadow: 0 0 30px rgba(255,102,153,0.6);
+            letter-spacing: 3px;
         }
 
-        /* Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-            gap: 32px;
-            margin-top: 60px;
+        /* Tabs */
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 80px 0 50px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
         }
 
-        .card {
+        .tab {
+            padding: 18px 32px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 999px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+        }
+
+        .tab.active, .tab:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(255,51,102,0.3);
+        }
+
+        /* Accordion Content */
+        .accordion-content {
+            display: none;
             background: var(--card);
             border-radius: var(--radius);
-            padding: 48px 42px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            border: 1px solid rgba(255,255,255,0.06);
+            padding: 50px 45px;
+            margin-bottom: 40px;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.5);
             backdrop-filter: blur(20px);
         }
 
-        .card:hover {
-            transform: translateY(-20px) scale(1.03);
-            box-shadow: 0 50px 120px rgba(255, 51, 102, 0.25);
+        .accordion-content.active {
+            display: block;
+            animation: fadeInUp 0.6s ease forwards;
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 60%;
-            height: 200%;
-            background: linear-gradient(
-                120deg,
-                transparent,
-                rgba(255, 255, 255, 0.12),
-                transparent
-            );
-            transform: skewX(-25deg);
-            animation: shine 6s linear infinite;
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes shine {
-            0% { transform: translateX(-150%) skewX(-25deg); }
-            100% { transform: translateX(400%) skewX(-25deg); }
-        }
-
-        .image-box {
+        .profile-photo {
             width: 100%;
-            height: 320px;
-            background: linear-gradient(135deg, #1a1c2e, #252840);
-            border-radius: 20px;
-            margin-bottom: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.35rem;
-            color: #ff99aa;
-            border: 2px dashed rgba(255, 102, 153, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .image-box::after {
-            content: attr(data-label);
-            position: absolute;
-            bottom: 24px;
-            font-size: 0.95rem;
-            letter-spacing: 3px;
-            opacity: 0.75;
+            max-width: 380px;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 6px solid rgba(255,51,102,0.4);
+            box-shadow: 0 20px 60px rgba(255,51,102,0.25);
+            margin-bottom: 30px;
         }
 
         h2 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.4rem;
-            font-weight: 700;
+            font-size: 2.6rem;
             margin-bottom: 20px;
             color: white;
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(to right, var(--accent), var(--accent2));
-            margin-top: 12px;
-            border-radius: 2px;
-        }
-
         p {
-            font-size: 1.18rem;
+            font-size: 1.2rem;
+            line-height: 1.85;
             color: var(--muted);
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .stat {
             background: rgba(255,255,255,0.05);
-            border-left: 5px solid var(--accent);
-            padding: 22px 28px;
-            margin: 28px 0;
-            border-radius: 12px;
-            font-size: 1.25rem;
+            border-left: 6px solid var(--accent);
+            padding: 24px 30px;
+            margin: 30px 0;
+            border-radius: 16px;
+            font-size: 1.3rem;
             color: #ffccdd;
             font-weight: 600;
-            box-shadow: inset 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .warning {
-            margin: 80px 0;
+            margin: 80px auto;
+            max-width: 900px;
             padding: 50px 40px;
             background: linear-gradient(135deg, rgba(255,51,102,0.15), rgba(255,102,153,0.1));
-            border: 2px solid rgba(255,51,102,0.4);
-            border-radius: 24px;
+            border: 2px solid var(--accent);
+            border-radius: 28px;
             text-align: center;
-            font-size: 1.45rem;
-            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 1.7;
             color: #ffbbcc;
-            line-height: 1.6;
-            box-shadow: 0 20px 60px rgba(255,51,102,0.2);
         }
 
         .footer {
             text-align: center;
-            padding: 80px 20px 60px;
-            color: #555577;
-            font-size: 1.05rem;
-        }
-
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
+            padding: 100px 20px 60px;
+            color: #666688;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -289,61 +228,65 @@ YPE html>
     <div class="background"></div>
     <div class="orb orb1"></div>
     <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
 
     <div class="container">
 
-        <!-- HERO -->
-        <section class="hero">
+        <div class="hero">
             <div class="hero-badge">
                 <span class="dot"></span>
-                2026 • ULTIMATE ROAST EDITION
+                2026 ULTIMATE ROAST EXPERIENCE
             </div>
             <h1>ARYAN MISHRA</h1>
             <p class="subtitle">DAV Class 10’s Biggest Useless Motherfucking Asshole</p>
-        </section>
-
-        <!-- CONTENT GRID -->
-        <div class="grid">
-
-            <!-- Aryan -->
-            <div class="card reveal">
-                <div class="image-box" data-label="PHYSICS GIRAFFE • TALL • WEAK • WORTHLESS">
-                    PHOTO OF THE PHYSICS GIRAFFE<br>— TALL, WEAK & WORTHLESS —
-                </div>
-                <h2>Aryan Mishra</h2>
-                <p>Aryan Mishra, the ultimate worthless piece of shit student of DAV Class 10, is a tall, lanky, spineless motherfucking asshole who deserves every single insult thrown at him. This brain-dead giraffe loves physics like a desperate simp, but physics bends him over and fucks him mercilessly every single exam. He scores so low that even the invigilator feels second-hand embarrassment. In the eyes of every class teacher, Aryan is nothing but a certified dumbass — a walking waste of oxygen whose only talent is disappointing everyone around him. No teacher likes this useless cunt. Devashish Sir from Maths especially hates his guts and beats the living shit out of him almost every other day, because even the chalkboard has more brain cells than this tall weakling. Aryan’s arms are thinner than his excuses, his body is all height and zero strength — a pathetic, fragile sack of bones that couldn’t fight a mosquito without crying. Motherfucker thinks he’s smart because he “loves” physics, but the subject keeps raping his marksheet while he sits there like a confused virgin.</p>
-                
-                <div class="stat">
-                    ERROR 404: BRAIN NOT FOUND<br>
-                    RESULT: PERSONAL PUNCHING BAG OF NCERT &amp; DEVASHISH SIR
-                </div>
-            </div>
-
-            <!-- Father -->
-            <div class="card reveal">
-                <h2>Amarnath Mishra</h2>
-                <p>Now let’s talk about his father, Amarnath Mishra — a brainless, good-for-nothing dumbass farmer from the motherfucking chamar jati who somehow managed to produce an even bigger failure than himself. This low-life illiterate cunt spends his days playing in mud, shouting useless commands at home, and pretending he’s the head of the family while being the biggest embarrassment in the entire bloodline. Amarnath is a classic dalit chamar motherfucker who couldn’t rise above his own bullshit yet acts like he’s some village god. He roasts his son daily but can’t even roast a single decent crop. Lazy, loud, and utterly worthless — the only thing this chamar has successfully farmed is failure, disappointment, and a tall physics-fucked son who inherited his father’s empty skull. Absolute piece of shit father.</p>
-            </div>
-
-            <!-- Mother -->
-            <div class="card reveal">
-                <h2>Nita Mishra</h2>
-                <p>His mother, Nita Mishra, is a filthy, cock-sucking bitch who is famous in whispers for taking blowjobs, handjobs, and fingering like it’s her daily vitamin. This desperate whore acts all high and mighty at home, nagging and screaming at everyone, but behind closed doors she’s on her knees faster than Aryan fails in physics. Nita is a royal cum-guzzling bitch — always ready with her loose mouth and loose morals, lecturing her son about studies while she herself gets fingered by whoever gives her attention. She feeds Aryan ghee and butter to make him tall and useless, then cries about his marks like the hypocritical slut she is. Total bitch, total whore, total embarrassment who should keep her legs and mouth shut instead of producing more failures like Aryan.</p>
-            </div>
-
-            <!-- Palak -->
-            <div class="card reveal">
-                <div class="image-box" data-label="THETA • JIGGLY PHYSICS ASS IN ACTION">
-                    "THETA" VISUALIZATION<br>JIGGLY PHYSICS ASS IN ACTION
-                </div>
-                <h2>Palak Shree (Theta)</h2>
-                <p>And finally, his so-called girlfriend Palak Shree, whom this loser Aryan calls “Theta” and everyone else knows as “Jiggly Physics.” This fluffy, sticky, motherfucking whore has an ass so fatty, jiggly, and sticky that it looks like two overripe watermelons fighting for space in her pants. Her whole body is soft, wobbly, and disgusting — pure sticky fluff with zero substance, just like Aryan’s physics answers. She distracts this tall dumbass with her massive jiggling ass and sticky sweetness while physics continues to destroy him. Palak is a cheap, brainless cum-dump who wobbles like a badly solved oscillation problem every time she walks. Theta? More like “Theeta” — the ultimate distraction and useless variable in Aryan’s already fucked life. This jiggly sticky bitch is perfect for him: both are worthless, both are jokes, and both deserve each other’s pathetic existence.</p>
-            </div>
-
         </div>
 
-        <div class="warning reveal">
+        <!-- Photo in Hero -->
+        <div style="text-align:center; margin: 40px 0 60px;">
+            <img src="https://picsum.photos/id/1015/800/900" alt="Aryan Mishra - Physics Giraffe" class="profile-photo" style="max-width:420px; height:480px;">
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" id="tabs">
+            <div class="tab active" data-tab="aryan">Aryan Mishra</div>
+            <div class="tab" data-tab="father">Amarnath Mishra</div>
+            <div class="tab" data-tab="mother">Nita Mishra</div>
+            <div class="tab" data-tab="palak">Palak Shree (Theta)</div>
+        </div>
+
+        <!-- Aryan Content -->
+        <div id="aryan" class="accordion-content active">
+            <img src="https://picsum.photos/id/1015/800/900" alt="Aryan Mishra" class="profile-photo" style="margin: 0 auto 30px;">
+            <h2>Aryan Mishra</h2>
+            <p>Aryan Mishra, the ultimate worthless piece of shit student of DAV Class 10, is a tall, lanky, spineless motherfucking asshole who deserves every single insult thrown at him. This brain-dead giraffe loves physics like a desperate simp, but physics bends him over and fucks him mercilessly every single exam. He scores so low that even the invigilator feels second-hand embarrassment. In the eyes of every class teacher, Aryan is nothing but a certified dumbass — a walking waste of oxygen whose only talent is disappointing everyone around him. No teacher likes this useless cunt. Devashish Sir from Maths especially hates his guts and beats the living shit out of him almost every other day, because even the chalkboard has more brain cells than this tall weakling. Aryan’s arms are thinner than his excuses, his body is all height and zero strength — a pathetic, fragile sack of bones that couldn’t fight a mosquito without crying. Motherfucker thinks he’s smart because he “loves” physics, but the subject keeps raping his marksheet while he sits there like a confused virgin.</p>
+            
+            <div class="stat">
+                ERROR 404: BRAIN NOT FOUND<br>
+                RESULT: PERSONAL PUNCHING BAG OF NCERT &amp; DEVASHISH SIR
+            </div>
+        </div>
+
+        <!-- Father Content -->
+        <div id="father" class="accordion-content">
+            <img src="https://picsum.photos/id/1015/800/900" alt="Aryan Mishra" class="profile-photo" style="margin: 0 auto 30px;">
+            <h2>Amarnath Mishra</h2>
+            <p>Now let’s talk about his father, Amarnath Mishra — a brainless, good-for-nothing dumbass farmer from the motherfucking chamar jati who somehow managed to produce an even bigger failure than himself. This low-life illiterate cunt spends his days playing in mud, shouting useless commands at home, and pretending he’s the head of the family while being the biggest embarrassment in the entire bloodline. Amarnath is a classic dalit chamar motherfucker who couldn’t rise above his own bullshit yet acts like he’s some village god. He roasts his son daily but can’t even roast a single decent crop. Lazy, loud, and utterly worthless — the only thing this chamar has successfully farmed is failure, disappointment, and a tall physics-fucked son who inherited his father’s empty skull. Absolute piece of shit father.</p>
+        </div>
+
+        <!-- Mother Content -->
+        <div id="mother" class="accordion-content">
+            <img src="https://picsum.photos/id/1015/800/900" alt="Aryan Mishra" class="profile-photo" style="margin: 0 auto 30px;">
+            <h2>Nita Mishra</h2>
+            <p>His mother, Nita Mishra, is a filthy, cock-sucking bitch who is famous in whispers for taking blowjobs, handjobs, and fingering like it’s her daily vitamin. This desperate whore acts all high and mighty at home, nagging and screaming at everyone, but behind closed doors she’s on her knees faster than Aryan fails in physics. Nita is a royal cum-guzzling bitch — always ready with her loose mouth and loose morals, lecturing her son about studies while she herself gets fingered by whoever gives her attention. She feeds Aryan ghee and butter to make him tall and useless, then cries about his marks like the hypocritical slut she is. Total bitch, total whore, total embarrassment who should keep her legs and mouth shut instead of producing more failures like Aryan.</p>
+        </div>
+
+        <!-- Palak Content -->
+        <div id="palak" class="accordion-content">
+            <img src="https://picsum.photos/id/1015/800/900" alt="Aryan Mishra" class="profile-photo" style="margin: 0 auto 30px;">
+            <h2>Palak Shree (Theta)</h2>
+            <p>And finally, his so-called girlfriend Palak Shree, whom this loser Aryan calls “Theta” and everyone else knows as “Jiggly Physics.” This fluffy, sticky, motherfucking whore has an ass so fatty, jiggly, and sticky that it looks like two overripe watermelons fighting for space in her pants. Her whole body is soft, wobbly, and disgusting — pure sticky fluff with zero substance, just like Aryan’s physics answers. She distracts this tall dumbass with her massive jiggling ass and sticky sweetness while physics continues to destroy him. Palak is a cheap, brainless cum-dump who wobbles like a badly solved oscillation problem every time she walks. Theta? More like “Theeta” — the ultimate distraction and useless variable in Aryan’s already fucked life. This jiggly sticky bitch is perfect for him: both are worthless, both are jokes, and both deserve each other’s pathetic existence.</p>
+        </div>
+
+        <div class="warning">
             THE ENTIRE MISHRA FAMILY IS A CIRCUS OF FAILURES — A TALL WEAK PHYSICS-FUCKED ASSHOLE SON, A CHAMAR DALIT FARMER MOTHERFUCKER FATHER, A COCK-HUNGRY BLOWJOB QUEEN BITCH MOTHER, A STEPSISTER ANUSHKA STUCK IN THIS MESS, AND A FATTY-ASSED JIGGLY STICKY GIRLFRIEND WHO COMPLETES THE NIGHTMARE.
         </div>
 
@@ -353,57 +296,51 @@ YPE html>
     </div>
 
     <script>
-        // Scroll Reveal
-        function revealOnScroll() {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach((el, index) => {
-                const windowHeight = window.innerHeight;
-                const elementTop = el.getBoundingClientRect().top;
-                const elementVisible = 100;
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.accordion-content');
 
-                if (elementTop < windowHeight - elementVisible) {
-                    setTimeout(() => {
-                        el.classList.add('active');
-                    }, index * 120);
-                }
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Add active to clicked tab
+                tab.classList.add('active');
+
+                // Hide all contents
+                contents.forEach(c => c.classList.remove('active'));
+                // Show the matching content
+                const target = document.getElementById(tab.dataset.tab);
+                if (target) target.classList.add('active');
             });
-        }
-
-        window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', () => {
-            setTimeout(() => revealOnScroll(), 600);
         });
 
-        // Extra floating particles (soft glowing dots)
+        // Soft floating particles
         function createParticle() {
-            const particle = document.createElement('div');
-            particle.style.position = 'fixed';
-            particle.style.width = Math.random() * 5 + 3 + 'px';
-            particle.style.height = particle.style.width;
-            particle.style.background = 'rgba(255, 102, 153, 0.6)';
-            particle.style.borderRadius = '50%';
-            particle.style.left = Math.random() * 100 + 'vw';
-            particle.style.top = '-10px';
-            particle.style.opacity = Math.random() * 0.6 + 0.3;
-            particle.style.zIndex = '-1';
-            particle.style.pointerEvents = 'none';
-            document.body.appendChild(particle);
+            const p = document.createElement('div');
+            p.style.position = 'fixed';
+            p.style.width = Math.random() * 6 + 4 + 'px';
+            p.style.height = p.style.width;
+            p.style.background = 'rgba(255,102,153,0.5)';
+            p.style.borderRadius = '50%';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.top = '-20px';
+            p.style.zIndex = '-1';
+            document.body.appendChild(p);
 
-            const duration = Math.random() * 25 + 20;
-            particle.animate([
-                { transform: 'translateY(0)', opacity: particle.style.opacity },
+            p.animate([
+                { transform: 'translateY(0)', opacity: 0.6 },
                 { transform: `translateY(${window.innerHeight + 100}px)`, opacity: 0 }
             ], {
-                duration: duration * 1000,
+                duration: Math.random() * 18000 + 22000,
                 easing: 'linear'
             });
 
-            setTimeout(() => particle.remove(), duration * 1000);
+            setTimeout(() => p.remove(), 40000);
         }
 
         setInterval(() => {
-            if (Math.random() > 0.4) createParticle();
-        }, 180);
+            if (Math.random() > 0.35) createParticle();
+        }, 220);
     </script>
 </body>
 </html>
