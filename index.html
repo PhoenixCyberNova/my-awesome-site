@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan Mishra - DAV Class 10’s Biggest Useless Motherfucking Asshole</title>
+    <title>The Mishra Disaster - Class 10 Hall of Shame</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -25,611 +25,204 @@
         }
         .background { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 30% 20%, rgba(255,51,102,0.25) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(255,102,153,0.22) 0%, transparent 55%); animation: bgShift 30s ease infinite; }
         @keyframes bgShift { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
-        .orb { position: fixed; border-radius: 50%; filter: blur(100px); opacity: 0.13; z-index: -1; animation: floatOrb 40s linear infinite; }
-        .orb1 { width: 800px; height: 800px; background: #ff3366; top: -20%; left: -15%; }
-        .orb2 { width: 1000px; height: 1000px; background: #ff6699; bottom: -30%; right: -25%; animation-delay: -18s; }
-        @keyframes floatOrb { 0% { transform: translate(0,0); } 50% { transform: translate(140px, -100px); } 100% { transform: translate(0,0); } }
-
+        
         .container { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 30px 20px; }
         .hero { text-align: center; padding: 80px 20px 50px; }
-        h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(4rem, 9vw, 7.5rem); font-weight: 900; background: linear-gradient(90deg, #fff, #ff6699, #ff3366); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -4px; }
-        .subtitle { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 4vw, 2.5rem); color: var(--accent2); margin-top: 10px; }
+        h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(3rem, 8vw, 6rem); font-weight: 900; background: linear-gradient(90deg, #fff, #ff6699, #ff3366); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -4px; text-transform: uppercase; }
+        .subtitle { font-family: 'Playfair Display', serif; font-size: clamp(1.2rem, 3vw, 2rem); color: var(--accent2); margin-top: 10px; }
 
         .tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 60px 0 40px; padding-bottom: 20px; border-bottom: 2px solid rgba(255,255,255,0.1); }
-        .tab { padding: 18px 38px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 50px; font-size: 1.2rem; font-weight: 600; cursor: pointer; transition: all 0.4s ease; }
+        .tab { padding: 15px 30px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 50px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.4s ease; }
         .tab.active, .tab:hover { background: var(--accent); color: white; transform: translateY(-5px); box-shadow: 0 15px 35px rgba(255,51,102,0.4); }
 
-        .content-card { display: none; background: var(--card); border-radius: var(--radius); padding: 50px; margin-bottom: 60px; box-shadow: 0 30px 90px rgba(0,0,0,0.6); backdrop-filter: blur(20px); }
+        .content-card { display: none; background: var(--card); border-radius: var(--radius); padding: 50px; margin-bottom: 60px; box-shadow: 0 30px 90px rgba(0,0,0,0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
         .content-card.active { display: block; animation: fadeInUp 0.6s ease; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
 
-        .profile-photo { width: 100%; max-width: 420px; height: 480px; object-fit: cover; border-radius: 24px; border: 8px solid var(--accent); box-shadow: 0 25px 70px rgba(255,51,102,0.35); margin: 0 auto 40px; display: block; }
+        .profile-photo { width: 100%; max-width: 350px; height: 400px; object-fit: cover; border-radius: 24px; border: 6px solid var(--accent); box-shadow: 0 20px 50px rgba(255,51,102,0.3); margin: 0 auto 30px; display: block; }
 
-        h2 { font-family: 'Space Grotesk', sans-serif; font-size: 2.9rem; text-align: center; margin-bottom: 30px; color: white; }
-        p { font-size: 1.25rem; line-height: 1.9; color: var(--muted); margin-bottom: 35px; }
+        h2 { font-family: 'Space Grotesk', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 25px; color: white; }
+        p { font-size: 1.2rem; line-height: 1.8; color: var(--muted); margin-bottom: 30px; text-align: center; }
 
-        .roast-section { margin-top: 50px; }
-        .roast-title { font-size: 1.8rem; color: var(--accent2); margin-bottom: 20px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
-        .roast-list li { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1.22rem; position: relative; padding-left: 34px; list-style: none; }
-        .roast-list li::before { content: "🔥"; position: absolute; left: 0; color: var(--accent); font-size: 1.4rem; }
+        .roast-list { list-style: none; padding: 0; }
+        .roast-list li { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1.1rem; padding-left: 40px; position: relative; }
+        .roast-list li::before { content: "🔥"; position: absolute; left: 10px; }
 
-        .warning { background: linear-gradient(135deg, rgba(255,51,102,0.18), rgba(255,102,153,0.12)); border: 3px solid var(--accent); padding: 50px; border-radius: 28px; text-align: center; font-size: 1.55rem; line-height: 1.8; margin: 80px 0; color: #ffbbcc; }
-        .footer { text-align: center; padding: 100px 20px 60px; color: #555577; font-size: 1.15rem; }
+        /* Modal Styles */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); z-index: 9999; overflow-y: auto; padding: 20px; }
+        .modal-content { max-width: 1000px; margin: 40px auto; background: #141626; border-radius: 32px; padding: 40px; border: 1px solid var(--accent); }
+        .modal-close { position: absolute; top: 30px; right: 40px; font-size: 3rem; cursor: pointer; color: var(--accent); }
 
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; overflow-y: auto; }
-        .modal-content { max-width: 1100px; margin: 40px auto; background: var(--card); border-radius: var(--radius); padding: 40px; position: relative; }
-        .modal-close { position: absolute; top: 20px; right: 30px; font-size: 2rem; cursor: pointer; color: #ffbbcc; }
-        .wedding-tabs { display: flex; flex-direction: column; gap: 8px; margin-bottom: 30px; }
-        .wedding-tab { padding: 18px 24px; background: rgba(255,255,255,0.08); border-radius: 16px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; }
+        .wedding-tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 40px; }
+        .wedding-tab { padding: 15px; background: rgba(255,255,255,0.05); text-align: center; border-radius: 12px; cursor: pointer; transition: 0.3s; font-weight: bold; }
         .wedding-tab.active { background: var(--accent); color: white; }
+
         .wedding-section { display: none; }
-        .wedding-section.active { display: block; animation: fadeInUp 0.5s ease; }
-        .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-        .food-item { background: rgba(255,255,255,0.06); padding: 18px; border-radius: 16px; font-size: 1.1rem; transition: transform 0.3s ease; border-left: 4px solid var(--accent); }
-        .food-item:hover { transform: scale(1.03); background: rgba(255,255,255,0.1); }
-        .food-desc { display: block; font-size: 0.85rem; color: var(--muted); margin-top: 6px; font-style: italic; }
-        .vip-card, .dahej-card, .talk-card { background: rgba(255,255,255,0.06); padding: 28px; border-radius: 20px; margin-bottom: 20px; }
+        .wedding-section.active { display: block; animation: fadeInUp 0.4s ease; }
+        
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .data-card { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 20px; border-left: 4px solid var(--accent); }
+        .data-card h3 { color: var(--accent2); margin-bottom: 15px; }
+
+        .footer { text-align: center; padding: 60px; color: #555577; }
     </style>
 </head>
 <body>
     <div class="background"></div>
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
     <div class="container">
         <div class="hero">
             <h1>ARYAN MISHRA</h1>
-            <p class="subtitle">DAV Class 10’s Biggest Useless Motherfucking Asshole</p>
+            <p class="subtitle">The Ultimate Academic Disaster of DAV Class 10</p>
         </div>
 
-        <div style="text-align:center; margin-bottom: 60px;">
-            <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo" style="max-width:380px;height:440px;">
-        </div>
-
-        <div class="tabs" id="main-tabs">
-            <div class="tab active" data-tab="aryan">Aryan Mishra</div>
-            <div class="tab" data-tab="father">Amarnath Mishra</div>
-            <div class="tab" data-tab="mother">Nita Mishra</div>
-            <div class="tab" data-tab="palak">Palak Shree (Theta)</div>
-            <div class="tab" data-tab="anjani">Anjani Kumar Singh</div>
-            <div class="tab" data-tab="laxmeshwari">Laxmeshwari</div>
-            <div class="tab" onclick="openWeddingModal()" style="background: linear-gradient(90deg,#ff3366,#ff6699); color:white;">ARYAN MISHRA WEDS PALAK SHREE (THETA) - 19 SEPTEMBER 2026</div>
+        <div class="tabs">
+            <div class="tab active" data-tab="aryan">The Subject</div>
+            <div class="tab" data-tab="parents">The Heritage</div>
+            <div class="tab" data-tab="theta">The Distraction</div>
+            <div class="tab" onclick="openWedding()" style="background: linear-gradient(90deg,#ff3366,#ff6699); color:white;">THE DISASTER WEDDING 2026</div>
         </div>
 
         <div id="aryan" class="content-card active">
-            <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo">
+            <img src="aryan_photo.png" alt="Aryan" class="profile-photo">
             <h2>Aryan Mishra</h2>
-            <p>Aryan Mishra, the ultimate worthless piece of shit student of DAV Class 10, is a tall, lanky, spineless motherfucking asshole who deserves every single insult thrown at him. This brain-dead giraffe loves physics like a desperate simp, but physics bends him over and fucks him mercilessly every single exam. He scores so low that even the invigilator feels second-hand embarrassment. No teacher likes this useless cunt. Devashish Sir especially hates his guts and beats the living shit out of him daily.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Self-sucking his own tiny ego while pretending to study Physics</li>
-                    <li>Blowjobing his own failure every time he opens NCERT</li>
-                    <li>Fingering his mother’s patience until it breaks</li>
-                    <li>Jerking off to the idea of scoring above 40 in Physics</li>
-                    <li>Being a tall useless giraffe who only excels at disappointing everyone</li>
-                    <li>Collecting excuses thicker than his arms</li>
-                </ul>
-            </div>
-            <div class="roast-section">
-                <h3 class="roast-title">Special Skills</h3>
-                <ul class="roast-list">
-                    <li>Turning every exam into a public humiliation show</li>
-                    <li>Making Devashish Sir regret becoming a teacher</li>
-                    <li>Being the human embodiment of "Tall but No Brain"</li>
-                    <li>Disappointing his entire bloodline in one report card</li>
-                    <li>Simping for Physics while Physics brutally rejects him</li>
-                </ul>
+            <p>A tall, lanky embodiment of failed physics experiments. Known for pretending to study while actually just staring into the abyss of his own poor report cards. Devashish Sir's favorite target for intellectual disappointment.</p>
+            <ul class="roast-list">
+                <li>Simping for Physics concepts that clearly don't love him back.</li>
+                <li>Breaking world records for "Longest Time Spent Staring at NCERT without learning a word."</li>
+                <li>Tall enough to see his future, but too brainless to fix it.</li>
+            </ul>
+        </div>
+
+        <div id="parents" class="content-card">
+            <h2>The Mishra Lineage</h2>
+            <div class="grid-3">
+                <div class="data-card">
+                    <h3>Amarnath Mishra</h3>
+                    <p>The man who realized too late that his son's brain is as empty as a dry harvest. Spends his time wondering where it all went wrong.</p>
+                </div>
+                <div class="data-card">
+                    <h3>Nita Mishra</h3>
+                    <p>Chief Enabler of Aryan's laziness. Master of providing high-calorie ghee for a low-performance brain.</p>
+                </div>
             </div>
         </div>
 
-        <div id="father" class="content-card">
-            <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo">
-            <h2>Amarnath Mishra</h2>
-            <p>Amarnath Mishra — the brainless chamar dalit farmer who somehow created an even bigger failure. This illiterate loudmouth spends his days playing in mud and shouting useless orders while being the biggest embarrassment of the bloodline.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Farming failure instead of crops</li>
-                    <li>Roasting his son while his own life is burnt</li>
-                    <li>Shouting at family like a village tyrant with zero achievements</li>
-                    <li>Producing tall weak sons with empty skulls</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="mother" class="content-card">
-            <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo">
-            <h2>Nita Mishra</h2>
-            <p>Nita Mishra, the cock-sucking desperate bitch who lectures her son about studies while being on her knees faster than Aryan fails exams. Famous for blowjobs, handjobs and fingering sessions.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Taking cum like daily vitamins</li>
-                    <li>Nagging everyone while being the biggest hypocrite</li>
-                    <li>Feeding ghee to make her son tall and useless</li>
-                    <li>Being a royal cum-guzzling whore behind closed doors</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="palak" class="content-card">
-            <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo" style="object-position: top;">
+        <div id="theta" class="content-card">
             <h2>Palak Shree (Theta)</h2>
-            <p>Palak Shree — the jiggly sticky fatty-assed whore Aryan calls “Theta”. Her massive wobbling ass distracts this loser while Physics destroys him completely.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Jiggling her overripe watermelon ass everywhere</li>
-                    <li>Being the perfect distraction for a brainless tall giraffe</li>
-                    <li>Wobbling like a badly solved oscillation problem</li>
-                    <li>Sticking to Aryan like the cheap cum-dump she is</li>
-                </ul>
-            </div>
+            <p>The primary reason Aryan's internal oscillations never reach stability. A walking distraction that ensures Physics remains a mystery to him forever.</p>
+            <ul class="roast-list">
+                <li>Master of distracting Class 10’s biggest failure.</li>
+                <li>The "Constant Variable" in Aryan's formula for failing exams.</li>
+            </ul>
         </div>
 
-        <div id="anjani" class="content-card">
-            <img src="aryan.png.png" alt="Anjani Kumar Singh" class="profile-photo">
-            <h2>Anjani Kumar Singh</h2>
-            <p>Anjani Kumar Singh — the pathetic cuck father of that jiggly whore Theta who happily sold his daughter for dahej like a cheap pimp. This motherfucker talks big but bends over faster than his daughter when money is involved.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Blowjobing rich people for better deals on his daughter’s pussy</li>
-                    <li>Selling his fatty-assed daughter for cars and crores</li>
-                    <li>Being a spineless dalal who negotiates dahej like a roadside whore</li>
-                    <li>Watching his daughter get fucked while counting cash</li>
-                </ul>
-            </div>
-        </div>
-
-        <div id="laxmeshwari" class="content-card">
-            <img src="aryan.png.png" alt="Laxmeshwari" class="profile-photo">
-            <h2>Laxmeshwari</h2>
-            <p>Laxmeshwari — the cock-hungry desperate bitch mother of Theta who trained her daughter to be a perfect cum-dump. This whore lectures everyone while spreading her legs for anyone who offers more dahej.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Taking cum like daily vitamins just like her daughter</li>
-                    <li>Teaching her fatty daughter how to jiggle ass for money</li>
-                    <li>Blowjobing and handjobing dahej negotiators behind closed doors</li>
-                    <li>Being a royal cum-guzzling whore who sold her own blood</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="warning">
-            THE ENTIRE MISHRA FAMILY IS A CIRCUS OF FAILURES — TALL WEAK PHYSICS-FUCKED SON + CHAMAR DALIT FARMER FATHER + COCK-HUNGRY BITCH MOTHER + FATTY JIGGLY THETA GIRLFRIEND + HER PIMPS PARENTS = PERFECT DISASTER COUPLE
-        </div>
-        <div class="footer">
-            © 2026 DAV Class 10 Extreme Roasts • Powered by Pure Savage Energy &amp; Eternal Failure
-        </div>
+        <div class="footer">© 2026 Extreme Roasts • Devashish Sir Approved</div>
     </div>
 
     <div id="weddingModal" class="modal">
         <div class="modal-content">
-            <span class="modal-close" onclick="closeWeddingModal()">×</span>
-            <h1 style="text-align:center; font-size:3rem; margin-bottom:10px;">ARYAN MISHRA WEDS PALAK SHREE (THETA)</h1>
-            <p style="text-align:center; font-size:1.6rem; color:#ffbbcc;">19 SEPTEMBER 2026</p>
-
-            <div class="wedding-tabs" id="weddingTabs">
-                <div class="wedding-tab active" onclick="showWeddingSection(0)">🍽️ 300+ Unique Delicacies</div>
-                <div class="wedding-tab" onclick="showWeddingSection(1)">👑 VIP Guests</div>
-                <div class="wedding-tab" onclick="showWeddingSection(2)">💰 DAHEJ List</div>
-                <div class="wedding-tab" onclick="showWeddingSection(3)">🗣️ Parent Conversations</div>
+            <span class="modal-close" onclick="closeWedding()">×</span>
+            <h1 style="text-align:center; margin-bottom: 40px;">THE DISASTER OF THE CENTURY</h1>
+            
+            <div class="wedding-tabs">
+                <div class="wedding-tab active" onclick="setWSection(0)">🍽️ The Menu</div>
+                <div class="wedding-tab" onclick="setWSection(1)">👑 VIP Guest List</div>
+                <div class="wedding-tab" onclick="setWSection(2)">💰 The "Gift" Registry</div>
+                <div class="wedding-tab" onclick="setWSection(3)">🗣️ The Negotiations</div>
             </div>
 
-            <div id="weddingSection0" class="wedding-section active">
-                <h2 style="text-align:center; margin:30px 0 20px;">🌊 The Seafood & Global Menu (300 Items)</h2>
-                <div class="food-grid" id="foodGrid"></div>
+            <div class="wedding-section active">
+                <div class="grid-3" id="foodGrid"></div>
             </div>
 
-            <div id="weddingSection1" class="wedding-section">
-                <div class="vip-card"><h3>🔥 The Pandit / Momo</h3><p>Ignites the sacred fire with holy cumshots. Payment: 1 Crore.</p></div>
-                <div class="vip-card"><h3>📐 The Mathematician / Ud</h3><p>Handles sound/lights while making Aryan lick his lund. Payment: 10% Dahej.</p></div>
+            <div class="wedding-section">
+                <div class="grid-3">
+                    <div class="data-card">
+                        <h3>The Pandit (Momo)</h3>
+                        <p>Specializes in chanting mantras that sound suspiciously like roasting the groom. <strong>Fee: 1 Crore + Lifetime disrespect rights.</strong></p>
+                    </div>
+                    <div class="data-card">
+                        <h3>The Tech Lead (Ud)</h3>
+                        <p>Managing the sound system to ensure every guest hears the details of Aryan's failed tests. <strong>Fee: 10% of total wedding gifts.</strong></p>
+                    </div>
+                    <div class="data-card">
+                        <h3>Security (Einstein)</h3>
+                        <p>Providing luxury transport and making sure Aryan doesn't run away when the Physics exam questions start playing on the projector. <strong>Fee: 500 Bitcoins.</strong></p>
+                    </div>
+                </div>
             </div>
-            <div id="weddingSection2" class="wedding-section">
-                <div class="dahej-card"><ul><li>1 Defender</li><li>1 Crore Cash</li><li>5000 Bitcoin</li><li>40 Lakh PC</li></ul></div>
+
+            <div class="wedding-section">
+                <div class="data-card">
+                    <h3>Demands of the Mishra Clan</h3>
+                    <ul class="roast-list">
+                        <li>1 Defender Car (to escape the shame of his results)</li>
+                        <li>1 Crore Cash (to pay for the tutors he clearly needs)</li>
+                        <li>40 Lakh Gaming PC (for more distractions)</li>
+                        <li>Lifetime supply of Redbull & Dark Fantasy</li>
+                        <li>5000 Bitcoin (to fund a life where he doesn't need a job)</li>
+                    </ul>
+                </div>
             </div>
-            <div id="weddingSection3" class="wedding-section">
-                <div class="talk-card"><p>Nita & Amarnath demanding billions for their tall lanky giraffe son.</p></div>
+
+            <div class="wedding-section">
+                <div class="data-card">
+                    <p><strong>Nita Mishra:</strong> "Look, Anjani Ji, your daughter is the only one who can handle this tall failure. Just give us the 50 Crore mansion and we’ll take him off your hands."</p>
+                    <p><strong>Amarnath Mishra:</strong> "If I don't see that Defender car in the driveway, Aryan isn't walking into that mandap. He has exams to fail!"</p>
+                    <p><strong>Theta's Parents:</strong> "Take him! Just take him before he brings our daughter's GPA down too!"</p>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
+        // Tab Logic
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.content-card');
+        
         tabs.forEach(tab => {
-            if (tab.getAttribute('onclick')) return;
             tab.addEventListener('click', () => {
-                const targetId = tab.dataset.tab;
-                if (targetId === 'father' || targetId === 'mother') {
-                    const password = prompt("🔒 Enter Password:");
-                    if (password !== "9271") { alert("❌ Wrong password!"); return; }
+                const target = tab.dataset.tab;
+                if(!target) return;
+
+                if (target === 'parents') {
+                    const pw = prompt("Enter PIN to view Family Heritage:");
+                    if (pw !== "9271") {
+                        alert("Access Denied, Failure!");
+                        return;
+                    }
                 }
+
                 tabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
                 contents.forEach(c => c.classList.remove('active'));
-                const target = document.getElementById(targetId);
-                if (target) target.classList.add('active');
+                document.getElementById(target).classList.add('active');
             });
         });
 
-        function openWeddingModal() {
-            document.getElementById('weddingModal').style.display = 'block';
-            showWeddingSection(0);
-        }
-        function closeWeddingModal() { document.getElementById('weddingModal').style.display = 'none'; }
-        function showWeddingSection(n) {
-            document.querySelectorAll('.wedding-tab').forEach((t, i) => t.classList.toggle('active', i === n));
-            document.querySelectorAll('.wedding-section').forEach((s, i) => s.classList.toggle('active', i === n));
+        // Wedding Logic
+        function openWedding() { document.getElementById('weddingModal').style.display = 'block'; generateMenu(); }
+        function closeWedding() { document.getElementById('weddingModal').style.display = 'none'; }
+        
+        function setWSection(n) {
+            const wTabs = document.querySelectorAll('.wedding-tab');
+            const wSecs = document.querySelectorAll('.wedding-section');
+            wTabs.forEach((t, i) => t.classList.toggle('active', i === n));
+            wSecs.forEach((s, i) => s.classList.toggle('active', i === n));
         }
 
-        function generateFoods() {
+        function generateMenu() {
             const grid = document.getElementById('foodGrid');
-            if (grid.innerHTML !== '') return;
-
-            const foods = [
-                {n: "Beluga Caviar", e: "🖤", d: "Found in the Caspian Sea, served on chilled gold spoons."},
-                {n: "Lobster Thermidor", e: "🦞", d: "Atlantic lobster cooked in brandy cream, served in its shell."},
-                {n: "Alaskan King Crab", e: "🦀", d: "Fresh from the Bering Sea, served with melted garlic butter."},
-                {n: "Bluefin Tuna Sashimi", e: "🍣", d: "Caught in Japanese waters, served raw with real wasabi."},
-                {n: "Grilled Tiger Prawns", e: "🍤", d: "Found in the Indian Ocean, marinated in spicy peri-peri."},
-                {n: "Pan-Seared Scallops", e: "🐚", d: "Hand-dived from Scotland, served with cauliflower purée."},
-                {n: "Octopus Carpaccio", e: "🐙", d: "Mediterranean octopus, sliced paper-thin with lemon oil."},
-                {n: "Butter Poached Abalone", e: "🌊", d: "Rare shellfish from Australia, served in a truffle broth."},
-                {n: "Oysters Rockefeller", e: "🦪", d: "Pacific oysters baked with spinach, herbs, and breadcrumbs."},
-                {n: "Steamed Mussels", e: "🍲", d: "Found in New Zealand, steamed in white wine and garlic."},
-                {n: "Chilean Sea Bass", e: "🐟", d: "Deep sea fish served with a miso glaze and bok choy."},
-                {n: "Squid Ink Pasta", e: "🍝", d: "Italian style pasta served with calamari and bottarga."},
-                {n: "Baked Red Snapper", e: "🐠", d: "Reef fish stuffed with ginger and lemongrass."},
-                {n: "Grilled Swordfish", e: "⚔️", d: "Found in the Atlantic, served as thick meaty steaks."},
-                {n: "Soft Shell Crab", e: "🥪", d: "Deep fried and served in a spicy slider bun."},
-                {n: "Jumbo Stone Crabs", e: "🦀", d: "Found in Florida, served chilled with mustard sauce."},
-                {n: "Monkfish Liver", e: "🍣", d: "The 'foie gras' of the sea, served with ponzu."},
-                {n: "Calamari Fritti", e: "🦑", d: "Crispy fried squid rings served with spicy marinara."},
-                {n: "Seafood Paella", e: "🥘", d: "Spanish rice loaded with shrimp, clams, and saffron."},
-                {n: "Creamy Chowder", e: "🥣", d: "New England style, packed with clams and smoked bacon."},
-                {n: "Grilled Langoustines", e: "🦐", d: "Served with a lemon-herb butter sauce."},
-                {n: "King Salmon Tartare", e: "🥗", d: "Raw salmon from New Zealand with capers and dill."},
-                {n: "Uni (Sea Urchin)", e: "🟠", d: "Fresh from Hokkaido, served on crispy seaweed."},
-                {n: "Spiny Lobster Tail", e: "🦞", d: "Found in the Caribbean, grilled with lime butter."},
-                {n: "Salt-Baked Sea Bream", e: "🧂", d: "Cooked in a thick salt crust to keep it juicy."},
-                {n: "Clams Casino", e: "🦪", d: "Baked clams with bacon, peppers, and garlic."},
-                {n: "Shrimp Scampi", e: "🍝", d: "Classic Italian-American dish with loads of garlic."},
-                {n: "Grilled Sardines", e: "🐟", d: "Found in Portugal, served with sea salt and lemon."},
-                {n: "Halibut Confit", e: "🥘", d: "Slow-cooked in olive oil with cherry tomatoes."},
-                {n: "Fried Whitebait", e: "🐟", d: "Crispy tiny fish served with tartare sauce."},
-                {n: "Crab Rangoon", e: "🥟", d: "Deep fried wontons stuffed with crab and cream cheese."},
-                {n: "Bouillabaisse", e: "🥘", d: "French fish stew from Marseille with saffron."},
-                {n: "Tuna Poke Bowl", e: "🍚", d: "Hawaiian style with avocado and soy ginger."},
-                {n: "Grilled Eel (Unagi)", e: "🐍", d: "Japanese eel brushed with sweet soy sauce."},
-                {n: "Razor Clams", e: "🐚", d: "Found in Scotland, grilled with garlic and parsley."},
-                {n: "Dover Sole Meunière", e: "🐟", d: "Classic French dish with browned butter and lemon."},
-                {n: "Escargot", e: "🐌", d: "Snails from Burgundy baked in garlic butter."},
-                {n: "Wagyu A5 Steak", e: "🥩", d: "Japanese beef with maximum marbling, melts in mouth."},
-                {n: "Truffle Risotto", e: "🍚", d: "Italian rice cooked with black winter truffles."},
-                {n: "Peking Duck", e: "🦆", d: "Crispy skin duck served with thin pancakes and hoisin."},
-                {n: "Butter Chicken", e: "🍛", d: "Classic Delhi style, extra cream, extra fat."},
-                {n: "Lamb Nihari", e: "🍖", d: "Slow-cooked overnight, served with bone marrow."},
-                {n: "Galouti Kebab", e: "🍢", d: "Melt-in-the-mouth kebabs from Lucknow."},
-                {n: "Hyderabadi Haleem", e: "🥣", d: "Stew of meat, lentils, and pounded wheat."},
-                {n: "Chicken Biryani", e: "🍚", d: "Long grain basmati rice with spice-marinated chicken."},
-                {n: "Paneer Tikka", e: "🧀", d: "Cottage cheese cubes grilled in a clay oven."},
-                {n: "Dal Makhani", e: "🍲", d: "Slow-cooked black lentils with 1kg of butter."},
-                {n: "Tandoori Chicken", e: "🍗", d: "Bright red chicken roasted in a tandoor."},
-                {n: "Mutton Rogan Josh", e: "🥘", d: "Kashmiri lamb curry with alkanet root."},
-                {n: "Garlic Naan", e: "🫓", d: "Buttery flatbread loaded with roasted garlic."},
-                {n: "Shahi Tukda", e: "🍞", d: "Fried bread soaked in saffron milk and nuts."},
-                {n: "Gulab Jamun", e: "🍮", d: "Milk solids fried and soaked in sugar syrup."},
-                {n: "Gajar Ka Halwa", e: "🥕", d: "Carrot pudding cooked with ghee and khoya."},
-                {n: "Malai Kulfi", e: "🍦", d: "Indian dense ice cream flavored with cardamom."},
-                {n: "Rasmalai", e: "🥛", d: "Soft cheese patties in thickened saffron milk."},
-                {n: "Jalebi", e: "🌀", d: "Deep fried batter spirals in sugar syrup."},
-                {n: "Kaju Katli", e: "💎", d: "Cashew fudge topped with silver leaf."},
-                {n: "Dosa", e: "🥞", d: "Crispy fermented crepe from South India."},
-                {n: "Idli Samba", e: "⚪", d: "Steamed rice cakes with lentil stew."},
-                {n: "Vada Pav", e: "🍔", d: "Mumbai's favorite spicy potato burger."},
-                {n: "Pani Puri", e: "🟢", d: "Crispy spheres filled with spicy water."},
-                {n: "Chicken 65", e: "🌶️", d: "Spicy deep-fried chicken from South India."},
-                {n: "Fish Moilee", e: "🐟", d: "Kerala style fish in coconut milk curry."},
-                {n: "Pork Vindaloo", e: "🐷", d: "Spicy Goan curry with vinegar and garlic."},
-                {n: "Chicken Manchurian", e: "🥢", d: "Indo-Chinese classic with soy and chili."},
-                {n: "Schezwan Noodles", e: "🍜", d: "Super spicy noodles with red chili paste."},
-                {n: "Spring Rolls", e: "🌯", d: "Crispy vegetables wrapped and deep fried."},
-                {n: "Dim Sum", e: "🥟", d: "Steamed dumplings with various fillings."},
-                {n: "Kung Pao Chicken", e: "🥜", d: "Spicy stir-fry with peanuts and chilis."},
-                {n: "Mapo Tofu", e: "🍲", d: "Silken tofu in a spicy meat sauce."},
-                {n: "Fried Rice", e: "🍚", d: "Wok-tossed rice with eggs and vegetables."},
-                {n: "Beef Carpaccio", e: "🥩", d: "Raw beef slices with arugula and parmesan."},
-                {n: "Bruschetta", e: "🍞", d: "Toasted bread with tomato and basil."},
-                {n: "Lasagna", e: "🧀", d: "Layered pasta with ragu and bechamel."},
-                {n: "Fettuccine Alfredo", e: "🍝", d: "Pasta in a rich parmesan butter sauce."},
-                {n: "Carbonara", e: "🍝", d: "Pasta with guanciale, egg, and pecorino."},
-                {n: "Margherita Pizza", e: "🍕", d: "Simple basil, tomato, and mozzarella."},
-                {n: "Pepperoni Pizza", e: "🍕", d: "Classic spicy salami and cheese."},
-                {n: "Truffle Pizza", e: "🍕", d: "Luxury pizza with truffle oil and mushrooms."},
-                {n: "Osso Buco", e: "🍖", d: "Braised veal shanks with gremolata."},
-                {n: "Tiramisu", e: "☕", d: "Coffee-soaked ladyfingers with mascarpone."},
-                {n: "Cannoli", e: "🥨", d: "Crispy shells filled with sweet ricotta."},
-                {n: "Panna Cotta", e: "🍮", d: "Silky cooked cream with berry sauce."},
-                {n: "Gelato", e: "🍨", d: "Dense Italian ice cream, various flavors."},
-                {n: "Ratatouille", e: "🥘", d: "Provençal stewed vegetables from France."},
-                {n: "Coq au Vin", e: "🍗", d: "Chicken braised in red wine and mushrooms."},
-                {n: "French Onion Soup", e: "🥣", d: "Topped with a giant crouton and melted cheese."},
-                {n: "Quiche Lorraine", e: "🥧", d: "Savory tart with bacon and custard."},
-                {n: "Beef Bourguignon", e: "🥩", d: "Rich beef stew slow-cooked in Burgundy wine."},
-                {n: "Boule de Neige", e: "❄️", d: "White chocolate mousse snowballs."},
-                {n: "Crème Brûlée", e: "🔥", d: "Custard with a burnt sugar topping."},
-                {n: "Macarons", e: "🍪", d: "Delicate almond meringue cookies."},
-                {n: "Chocolate Fondant", e: "🌋", d: "Lava cake with a molten center."},
-                {n: "Croissant", e: "🥐", d: "Flaky buttery pastry from Paris."},
-                {n: "Pain au Chocolat", e: "🍫", d: "Chocolate-filled buttery pastry."},
-                {n: "Churros", e: "🥨", d: "Fried dough with cinnamon and chocolate dip."},
-                {n: "Gazpacho", e: "🥣", d: "Cold tomato soup from Andalusia."},
-                {n: "Tortilla Española", e: "🍳", d: "Spanish potato and egg omelet."},
-                {n: "Patatas Bravas", e: "🥔", d: "Fried potatoes with spicy tomato sauce."},
-                {n: "Gambas al Ajillo", e: "🦐", d: "Sizzling garlic shrimp from Madrid."},
-                {n: "Sushi Roll", e: "🍱", d: "Vinegar rice with fish and seaweed."},
-                {n: "Ramen", e: "🍜", d: "Rich pork bone broth with wheat noodles."},
-                {n: "Tempura", e: "🍤", d: "Lightly battered and fried vegetables/seafood."},
-                {n: "Yakitori", e: "🍢", d: "Grilled chicken skewers from Tokyo."},
-                {n: "Tonkatsu", e: "🐷", d: "Deep-fried breaded pork cutlet."},
-                {n: "Okonomiyaki", e: "🥞", d: "Savory Japanese cabbage pancake."},
-                {n: "Mochi", e: "🍡", d: "Chewy rice cakes filled with red bean."},
-                {n: "Matcha Cheesecake", e: "🍵", d: "Green tea flavored creamy cake."},
-                {n: "Pad Thai", e: "🍝", d: "Stir-fried rice noodles with peanuts."},
-                {n: "Tom Yum Soup", e: "🥣", d: "Hot and sour Thai soup with shrimp."},
-                {n: "Green Curry", e: "🍲", d: "Spicy coconut curry from Thailand."},
-                {n: "Mango Sticky Rice", e: "🥭", d: "Sweet mango with coconut glutinous rice."},
-                {n: "Som Tum", e: "🥗", d: "Spicy green papaya salad."},
-                {n: "Pho", e: "🍜", d: "Vietnamese noodle soup with beef herbs."},
-                {n: "Banh Mi", e: "🥪", d: "Vietnamese baguette sandwich with pork."},
-                {n: "Spring Rolls", e: "🌯", d: "Fresh rice paper rolls with herbs."},
-                {n: "Beef Rendang", e: "🥩", d: "Dry coconut beef curry from Indonesia."},
-                {n: "Nasi Goreng", e: "🍚", d: "Indonesian fried rice with a fried egg."},
-                {n: "Satay", e: "🍢", d: "Grilled meat with peanut sauce."},
-                {n: "Bibimbap", e: "🍚", d: "Korean mixed rice bowl with gochujang."},
-                {n: "Kimchi", e: "🥬", d: "Fermented spicy cabbage side dish."},
-                {n: "Bulgogi", e: "🥩", d: "Marinated grilled beef from Korea."},
-                {n: "Korean Fried Chicken", e: "🍗", d: "Double fried and extra crunchy."},
-                {n: "Tacos al Pastor", e: "🌮", d: "Marinated pork with pineapple."},
-                {n: "Enchiladas", e: "🌯", d: "Rolled tortillas with chili sauce."},
-                {n: "Guacamole", e: "🥑", d: "Mashed avocado with lime and onion."},
-                {n: "Quesadilla", e: "🧀", d: "Folded tortilla with melted cheese."},
-                {n: "Burrito", e: "🌯", d: "Giant wrap with beans, meat, and rice."},
-                {n: "Nachos Supremo", e: "🧀", d: "Loaded with cheese, jalapeños, and beef."},
-                {n: "Ceviche", e: "🥗", d: "Raw fish cured in citrus juices."},
-                {n: "Picanha Steak", e: "🥩", d: "Brazilian cut of beef with a fat cap."},
-                {n: "Feijoada", e: "🍲", d: "Brazilian black bean and pork stew."},
-                {n: "Empanadas", e: "🥟", d: "Savory stuffed pastries from Argentina."},
-                {n: "Hummus", e: "🥣", d: "Chickpea dip from the Middle East."},
-                {n: "Falafel", e: "🧆", d: "Fried chickpea balls served in pita."},
-                {n: "Tabbouleh", e: "🥗", d: "Parsley and bulgur salad with lemon."},
-                {n: "Shawarma", e: "🌯", d: "Spit-roasted meat wrap with tahini."},
-                {n: "Baklava", e: "🍯", d: "Filo pastry with nuts and honey syrup."},
-                {n: "Shakshuka", e: "🍳", d: "Eggs poached in a spicy tomato sauce."},
-                {n: "Kebabs", e: "🍢", d: "Various grilled meats from Turkey."},
-                {n: "Borek", e: "🥧", d: "Savory pastry with cheese and spinach."},
-                {n: "Moussaka", e: "🥘", d: "Greek eggplant and meat casserole."},
-                {n: "Souvlaki", e: "🍢", d: "Skewered meat from Greece."},
-                {n: "Spanakopita", e: "🥧", d: "Greek spinach and feta pie."},
-                {n: "Gyros", e: "🌯", d: "Greek wrap with tzatziki and fries."},
-                {n: "Fish and Chips", e: "🐟", d: "British classic with mushy peas."},
-                {n: "Shepherd’s Pie", e: "🥧", d: "Lamb and potato pie from UK."},
-                {n: "Beef Wellington", e: "🥩", d: "Beef in puff pastry with mushroom pate."},
-                {n: "Roast Beef", e: "🍖", d: "Traditional Sunday roast from England."},
-                {n: "Scotch Egg", e: "🥚", d: "Egg wrapped in sausage and breadcrumbs."},
-                {n: "Haggis", e: "🍲", d: "Savory pudding from Scotland."},
-                {n: "Bratwurst", e: "🌭", d: "German sausage served with mustard."},
-                {n: "Schnitzel", e: "🥩", d: "Breaded and fried meat cutlet."},
-                {n: "Sauerkraut", e: "🥬", d: "Fermented cabbage from Germany."},
-                {n: "Pretzel", e: "🥨", d: "Baked dough with sea salt."},
-                {n: "Black Forest Cake", e: "🍰", d: "Chocolate cake with cherries and cream."},
-                {n: "Apple Strudel", e: "🍎", d: "Flaky pastry with spiced apple filling."},
-                {n: "Swiss Fondue", e: "🫕", d: "Melted cheese served with bread cubes."},
-                {n: "Belgian Waffles", e: "🧇", d: "Thick waffles with syrup and cream."},
-                {n: "Moules Frites", e: "🐚", d: "Mussels and fries from Belgium."},
-                {n: "Champagne", e: "🍾", d: "Sparkling wine from France."},
-                {n: "Red Wine", e: "🍷", d: "Bordeaux or Merlot selections."},
-                {n: "Single Malt Whiskey", e: "🥃", d: "Aged 18 years from Islay."},
-                {n: "Gin and Tonic", e: "🍸", d: "With lime and botanical notes."},
-                {n: "Margarita", e: "🍹", d: "Tequila, lime, and salt rim."},
-                {n: "Negroni", e: "🥃", d: "Gin, vermouth, and campari."},
-                {n: "Espresso Martini", e: "🍸", d: "Coffee and vodka cocktail."},
-                {n: "Old Fashioned", e: "🥃", d: "Bourbon with bitters and orange."},
-                {n: "Piña Colada", e: "🥥", d: "Rum, pineapple, and coconut milk."},
-                {n: "Mojito", e: "🍃", d: "Rum with fresh mint and lime."},
-                {n: "Draft Beer", e: "🍺", d: "Served ice cold from the tap."},
-                {n: "Sake", e: "🍶", d: "Japanese rice wine, served warm."},
-                {n: "Vodka Shot", e: "🥃", d: "Russian standard, straight from freezer."},
-                {n: "Cognac", e: "🥃", d: "French brandy served in a snifter."},
-                {n: "Limoncello", e: "🍋", d: "Italian lemon liqueur, served chilled."},
-                {n: "Absinthe", e: "🧚", d: "The green fairy, very high alcohol."},
-                {n: "Hot Chocolate", e: "☕", d: "With marshmallows and thick cream."},
-                {n: "Chai Latte", e: "☕", d: "Spiced tea with steamed milk."},
-                {n: "Matcha Latte", e: "🍵", d: "Stone-ground green tea with milk."},
-                {n: "Iced Coffee", e: "🧋", d: "Cold brew with vanilla syrup."},
-                {n: "Fresh Orange Juice", e: "🍊", d: "Freshly squeezed every morning."},
-                {n: "Watermelon Juice", e: "🍉", d: "Refreshing cold summer drink."},
-                {n: "Coconut Water", e: "🥥", d: "Directly from the green coconut."},
-                {n: "Sparkling Water", e: "🫧", d: "With lemon and ice stones."},
-                {n: "Iced Tea", e: "🍹", d: "Peach or lemon flavored."},
-                {n: "Red Bull", e: "🔋", d: "Aryan's life fuel for failure."},
-                {n: "Monster Energy", e: "🧪", d: "Extra caffeine for late night sims."},
-                {n: "Blue Lagoon", e: "🌊", d: "Bright blue tropical cocktail."},
-                {n: "Cosmopolitan", e: "🍸", d: "Cranberry and vodka classic."},
-                {n: "Bloody Mary", e: "🍅", d: "Spicy tomato and vodka drink."},
-                {n: "Moscow Mule", e: "🏺", d: "Vodka and ginger beer in copper mug."},
-                {n: "Daiquiri", e: "🍓", d: "Frozen strawberry and rum blend."},
-                {n: "Sangria", e: "🍷", d: "Red wine with chopped fruits."},
-                {n: "Aperol Spritz", e: "🍊", d: "Sparkling wine and orange liqueur."},
-                {n: "Mimosa", e: "🥂", d: "Champagne and orange juice."},
-                {n: "Martini", e: "🍸", d: "Shaken, not stirred, with an olive."},
-                {n: "Tequila Sunrise", e: "🌅", d: "Layered orange juice and grenadine."},
-                {n: "Dark and Stormy", e: "⛈️", d: "Rum and ginger beer with lime."},
-                {n: "Irish Coffee", e: "☕", d: "Coffee with whiskey and cream."},
-                {n: "Caipirinha", e: "🍹", d: "Brazilian lime and cachaça drink."},
-                {n: "Hot Toddy", e: "🍯", d: "Whiskey with honey and lemon."},
-                {n: "White Russian", e: "🥛", d: "Vodka, kahlua, and cream."},
-                {n: "Long Island Iced Tea", e: "🥃", d: "Five spirits in one glass."},
-                {n: "Mai Tai", e: "🗿", d: "Tiki drink with rum and almond."},
-                {n: "Sex on the Beach", e: "🏖️", d: "Peach, cranberry, and orange juice."},
-                {n: "B-52 Shot", e: "🔥", d: "Layered coffee and orange liqueur."},
-                {n: "Jager Bomb", e: "💣", d: "Jagermeister dropped in energy drink."},
-                {n: "Tiramisu Cake", e: "🍰", d: "Coffee-flavored luxury dessert."},
-                {n: "New York Cheesecake", e: "🧀", d: "Dense and creamy with berry sauce."},
-                {n: "Chocolate Lava Cake", e: "🌋", d: "Molten center, served hot."},
-                {n: "Apple Pie", e: "🥧", d: "Classic American style with cinnamon."},
-                {n: "Banoffee Pie", e: "🍌", d: "Banana and toffee cream dessert."},
-                {n: "Lemon Tart", e: "🍋", d: "Sharp and sweet citrus pastry."},
-                {n: "Pavlova", e: "🦢", d: "Meringue with cream and passionfruit."},
-                {n: "Sticky Toffee Pudding", e: "🍮", d: "Served with warm butterscotch sauce."},
-                {n: "Bakewell Tart", e: "🍒", d: "Almond and cherry flavored tart."},
-                {n: "Red Velvet Cake", e: "🍰", d: "With cream cheese frosting."},
-                {n: "Carrot Cake", e: "🥕", d: "Spiced cake with walnuts and cream."},
-                {n: "Chocolate Brownie", e: "🍫", d: "Gooey and served with ice cream."},
-                {n: "Crème Caramel", e: "🍮", d: "Soft caramel custard from France."},
-                {n: "Profiteroles", e: "🥯", d: "Cream puffs covered in chocolate."},
-                {n: "Mille-Feuille", e: "🍰", d: "Thousand-layer vanilla pastry."},
-                {n: "Fruit Salad", e: "🥗", d: "Fresh tropical seasonal fruits."},
-                {n: "Vanilla Sundae", e: "🍨", d: "With fudge sauce and a cherry."},
-                {n: "Sorbet", e: "🍧", d: "Dairy-free frozen fruit dessert."},
-                {n: "Chocolate Mousse", e: "🍫", d: "Light and airy French dessert."},
-                {n: "Eclair", e: "🥯", d: "Long pastry filled with chocolate cream."},
-                {n: "Donuts", e: "🍩", d: "Glazed and filled with various jams."},
-                {n: "Cupcakes", e: "🧁", d: "Mini cakes with colorful frosting."},
-                {n: "Muffins", e: "🥯", d: "Blueberry or chocolate chip baked."},
-                {n: "Cookies", e: "🍪", d: "Warm chocolate chip and milk."},
-                {n: "Zucchini Fries", e: "🍟", d: "Healthy-ish deep fried veggie sticks."},
-                {n: "Onion Rings", e: "🧅", d: "Crispy beer-battered rings."},
-                {n: "Mozzarella Sticks", e: "🧀", d: "Deep fried cheese with dip."},
-                {n: "Garlic Bread", e: "🫓", d: "Toasted with herbs and garlic butter."},
-                {n: "French Fries", e: "🍟", d: "Classic salted potato sticks."},
-                {n: "Sweet Potato Fries", e: "🍠", d: "Crispy and naturally sweet."},
-                {n: "Chicken Wings", e: "🍗", d: "Spicy buffalo or BBQ flavored."},
-                {n: "Chicken Nuggets", e: "🍗", d: "Crispy and loved by every failure."},
-                {n: "Nachos", e: "🧀", d: "With melted cheese and salsa."},
-                {n: "Potato Skins", e: "🥔", d: "Loaded with bacon and cheese."},
-                {n: "Stuffed Jalapeños", e: "🌶️", d: "Poppers filled with cream cheese."},
-                {n: "Garlic Mushrooms", e: "🍄", d: "Sautéed in white wine and herbs."},
-                {n: "Bruschetta", e: "🍅", d: "Tomato and basil on toast."},
-                {n: "Caesar Salad", e: "🥗", d: "With croutons and parmesan cheese."},
-                {n: "Greek Salad", e: "🥗", d: "With feta cheese and olives."},
-                {n: "Caprese Salad", e: "🥗", d: "Tomato, mozzarella, and basil."},
-                {n: "Waldorf Salad", e: "🥗", d: "Apples, grapes, and walnuts."},
-                {n: "Coleslaw", e: "🥗", d: "Creamy shredded cabbage salad."},
-                {n: "Potato Salad", e: "🥔", d: "With mayo and spring onions."},
-                {n: "Egg Salad", e: "🥚", d: "Boiled eggs mashed with mayo."},
-                {n: "Chicken Salad", e: "🍗", d: "Grilled chicken with greens."},
-                {n: "Shrimp Cocktail", e: "🦐", d: "Cold shrimp with spicy sauce."},
-                {n: "Minestrone", e: "🍲", d: "Italian vegetable and pasta soup."},
-                {n: "Lentil Soup", e: "🥣", d: "Healthy and protein packed."},
-                {n: "Pumpkin Soup", e: "🎃", d: "Creamy and spiced with nutmeg."},
-                {n: "Mushroom Soup", e: "🍄", d: "Earthy and rich with cream."},
-                {n: "Tomato Basil Soup", e: "🍅", d: "Classic comfort food."},
-                {n: "Chicken Noodle Soup", e: "🍜", d: "Good for the physics-stressed soul."},
-                {n: "Beef Stew", e: "🥘", d: "Hearty and slow-cooked with veggies."},
-                {n: "Corn Chowder", e: "🌽", d: "Sweet corn in a thick cream base."},
-                {n: "Wonton Soup", e: "🥟", d: "Chinese dumplings in clear broth."},
-                {n: "Miso Soup", e: "🍲", d: "Japanese soy bean paste broth."},
-                {n: "Laksa", e: "🍜", d: "Spicy coconut noodle soup from SE Asia."},
-                {n: "Tom Kha Gai", e: "🥣", d: "Thai chicken coconut soup."},
-                {n: "Borscht", e: "🥣", d: "Beetroot soup from East Europe."},
-                {n: "Clam Chowder", e: "🐚", d: "Loaded with clams and potatoes."},
-                {n: "Minced Meat", e: "🍖", d: "Seasoned and grilled meat pieces."},
-                {n: "Meatballs", e: "🧆", d: "In spicy tomato gravy."},
-                {n: "Sausage Rolls", e: "🌭", d: "Pastry-wrapped pork sausage."},
-                {n: "Steak and Kidney Pie", e: "🥧", d: "British pub classic."},
-                {n: "Cornish Pasties", e: "🥟", d: "Meat and potato stuffed pastry."},
-                {n: "Roast Chicken", e: "🍗", d: "With herbs and roast gravy."},
-                {n: "Turkey Roast", e: "🦃", d: "Served with cranberry sauce."},
-                {n: "Pork Belly", e: "🐷", d: "Crispy skin and melt-in-mouth fat."},
-                {n: "Lamb Chops", e: "🍖", d: "Grilled with rosemary and garlic."},
-                {n: "Venison Steak", e: "🥩", d: "Game meat from deer, lean and rich."},
-                {n: "Duck Breast", e: "🦆", d: "Pan-seared with cherry reduction."},
-                {n: "Quail Roast", e: "🐦", d: "Small bird roasted with spices."},
-                {n: "Wild Boar Ragout", e: "🐗", d: "Rich pasta sauce from wild game."},
-                {n: "Rabbit Stew", e: "🐰", d: "Slow-cooked in white wine."},
-                {n: "Swordfish Steak", e: "🐟", d: "Grilled and served with lemon."},
-                {n: "Trout Almondine", e: "🐟", d: "Pan fried with toasted almonds."},
-                {n: "Cod Loin", e: "🐟", d: "Baked with a herb crust."},
-                {n: "Red Snapper Tikka", e: "🐠", d: "Indian spiced grilled fish."},
-                {n: "Prawn Curry", e: "🦐", d: "Coconut based spicy gravy."},
-                {n: "Crab Cakes", e: "🦀", d: "Fried patties of shredded crab meat."},
-                {n: "Scampi", e: "🦐", d: "Breaded and fried shrimp."},
-                {n: "Lobster Roll", e: "🦞", d: "Chunks of lobster in a buttery bun."},
-                {n: "Seafood Risotto", e: "🍚", d: "Creamy rice with mixed ocean catch."},
-                {n: "Paella", e: "🥘", d: "Spanish feast of rice and seafood."},
-                {n: "Grilled Calamari", e: "🦑", d: "Tender squid with garlic and chili."},
-                {n: "Baked Clams", e: "🐚", d: "With breadcrumbs and herbs."},
-                {n: "Sea Urchin Pasta", e: "🍝", d: "Luxury pasta with uni cream."},
-                {n: "Caviar Blinis", e: "🥞", d: "Mini pancakes with caviar and cream."},
-                {n: "Carpaccio", e: "🥩", d: "Thinly sliced raw beef or fish."},
-                {n: "Tartare", e: "🥗", d: "Hand-chopped raw meat or fish."},
-                {n: "Smoked Salmon", e: "🐟", d: "On bagels with cream cheese."},
-                {n: "Sashimi Plate", e: "🍱", d: "Mixed raw fish selections."},
-                {n: "Nigiri Sushi", e: "🍣", d: "Fish slices on hand-pressed rice."},
-                {n: "Temaki", e: "🍦", d: "Hand-rolled sushi cones."},
-                {n: "Chirashi", e: "🍚", d: "Scattered fish over vinegar rice."},
-                {n: "Udon Noodles", e: "🍜", d: "Thick wheat noodles in broth."},
-                {n: "Soba Noodles", e: "🍜", d: "Buckwheat noodles, hot or cold."},
-                {n: "Gyoza", e: "🥟", d: "Japanese pan-fried dumplings."},
-                {n: "Kushiyaki", e: "🍢", d: "Grilled skewers of everything."},
-                {n: "Takoyaki", e: "🐙", d: "Fried octopus balls with sauce."},
-                {n: "Shabu Shabu", e: "🫕", d: "Hot pot of thin meat and veggies."},
-                {n: "Sukiyaki", e: "🥘", d: "Sweet soy based hot pot."},
-                {n: "Teppanyaki", e: "🍳", d: "Grilled on a flat iron plate."},
-                {n: "Kaiseki", e: "🍱", d: "Traditional Japanese multi-course feast."},
-                {n: "Samosa", e: "🥟", d: "Spicy potato-filled pastry."},
-                {n: "Pakora", e: "🧅", d: "Deep fried onion or veggie fritters."},
-                {n: "Kachori", e: "🥯", d: "Deep fried spicy stuffed bread."},
-                {n: "Dhokla", e: "🟨", d: "Steamed fermented rice snack."},
-                {n: "Poha", e: "🍚", d: "Flattened rice with spices."},
-                {n: "Paratha", e: "🫓", d: "Layered flatbread with fillings."},
-                {n: "Kulcha", e: "🥯", d: "Soft bread stuffed with onion or paneer."},
-                {n: "Missi Roti", e: "🫓", d: "Gram flour spiced flatbread."},
-                {n: "Bhatura", e: "🥯", d: "Fluffy deep fried bread."},
-                {n: "Chana Masala", e: "🍲", d: "Spicy chickpea curry."},
-                {n: "Aloo Gobi", e: "🥘", d: "Potato and cauliflower stir fry."},
-                {n: "Baingan Bharta", e: "🍆", d: "Smoky mashed eggplant curry."},
-                {n: "Malai Kofta", e: "🧆", d: "Potato-cheese balls in cream sauce."},
-                {n: "Bhindi Masala", e: "🥒", d: "Spicy sautéed okra."},
-                {n: "Mutter Paneer", e: "🧀", d: "Peas and cheese curry."},
-                {n: "Palak Paneer", e: "🥬", d: "Spinach and cheese curry."},
-                {n: "Fish Fry", e: "🐟", d: "Bengali style crispy fish."},
-                {n: "Chicken Korma", e: "🍗", d: "Mild and creamy nut-based curry."},
-                {n: "Keema Matar", e: "🍖", d: "Minced meat with green peas."},
-                {n: "Mutton Korma", e: "🍖", d: "Rich mutton curry with spices."},
-                {n: "Fish Head Curry", e: "🥘", d: "Famous Singaporean/South Indian dish."},
-                {n: "Butter Garlic Crab", e: "🦀", d: "Famous Mumbai coastal delicacy."},
-                {n: "Vannamei Shrimp", e: "🦐", d: "Farm-fresh shrimp from coastal India."},
-                {n: "Bombay Duck", e: "🐟", d: "Crispy fried Harpadon nehereus fish."},
-                {n: "Tiger Prawn Malai", e: "🦐", d: "Bengali creamy coconut prawn curry."},
-                {n: "Goan Fish Curry", e: "🐠", d: "Spicy tangy coconut fish curry."},
-                {n: "Fried Calamari Rings", e: "🦑", d: "Golden fried squid for the VIPs."},
-                {n: "Clam Sukka", e: "🐚", d: "Mangalorean dry clam masala."},
-                {n: "Sardine Fry", e: "🐟", d: "Small fish fried with red chili paste."},
-                {n: "Pomfret Tandoori", e: "🐠", d: "Whole pomfret grilled in tandoor."},
-                {n: "Surmai Masala", e: "🐟", d: "King fish in a thick spicy gravy."}
-            ];
-
-            grid.innerHTML = '';
-            foods.forEach((item, index) => {
-                const foodDiv = document.createElement('div');
-                foodDiv.className = 'food-item';
-                foodDiv.innerHTML = `
-                    <span>${item.e} ${item.n} <strong>#${index+1}</strong></span>
-                    <span class="food-desc">${item.d}</span>
-                `;
-                grid.appendChild(foodDiv);
-            });
+            if(grid.innerHTML !== "") return;
+            const items = ["🍛 Failure Curry", "🍖 Disappointment Tikka", "🍲 Debt Dal", "🍗 Low-GPA Biryani", "🍹 Tears of Parents Mojito"];
+            for(let i=0; i<50; i++) {
+                const div = document.createElement('div');
+                div.className = 'data-card';
+                div.style.padding = '10px';
+                div.innerHTML = `${items[i % items.length]} #${i+1}`;
+                grid.appendChild(div);
+            }
         }
-
-        window.onload = function() {
-            generateFoods();
-            console.log('%cPassword for parents is 9271', 'color:#ff3366; font-size:18px;');
-        };
     </script>
 </body>
 </html>
