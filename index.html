@@ -296,18 +296,18 @@
 
     <script>
         // Tab System
-     // GitHub Audio Playback Function
-        function playGitAudio(fileName) {
-            // IMPORTANT: Replace USERNAME and REPO with your actual GitHub details
-            const githubBase = "https://raw.githubusercontent.com/USERNAME/REPO/main/";
-            const audioPath = githubBase + fileName + ".mp3";
-            
-            const audio = new Audio(audioPath);
-            audio.play().catch(err => {
-                console.error("Playback error:", err);
-                alert("Could not load audio. Check your GitHub link or file name.");
-            });
-        }
+     // Updated Audio Playback Function
+function playGitAudio(fileName) {
+    // This is the direct link to your raw files on GitHub
+    const githubBase = "https://raw.githubusercontent.com/phoenixcybernova/phoenixcybernova.github.io/main/";
+    const audioPath = githubBase + fileName + ".mp3"; // This makes sound1.mp3 or sound2.mp3
+    
+    const audio = new Audio(audioPath);
+    audio.play().catch(err => {
+        console.error("Playback error:", err);
+        alert("Still failing. Make sure the files are named exactly '" + fileName + ".mp3' and are uploaded to the 'main' branch.");
+    });
+}
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.content-card');
         tabs.forEach(tab => {
