@@ -50,13 +50,12 @@
 
         .roast-section { margin-top: 50px; }
         .roast-title { font-size: 1.8rem; color: var(--accent2); margin-bottom: 20px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; }
-        .roast-list li { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1.22rem; position: relative; padding-left: 34px; }
+        .roast-list li { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 1.22rem; position: relative; padding-left: 34px; list-style: none; }
         .roast-list li::before { content: "🔥"; position: absolute; left: 0; color: var(--accent); font-size: 1.4rem; }
 
         .warning { background: linear-gradient(135deg, rgba(255,51,102,0.18), rgba(255,102,153,0.12)); border: 3px solid var(--accent); padding: 50px; border-radius: 28px; text-align: center; font-size: 1.55rem; line-height: 1.8; margin: 80px 0; color: #ffbbcc; }
         .footer { text-align: center; padding: 100px 20px 60px; color: #555577; font-size: 1.15rem; }
 
-        /* Modal */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; overflow-y: auto; }
         .modal-content { max-width: 1100px; margin: 40px auto; background: var(--card); border-radius: var(--radius); padding: 40px; position: relative; }
         .modal-close { position: absolute; top: 20px; right: 30px; font-size: 2rem; cursor: pointer; color: #ffbbcc; }
@@ -66,8 +65,7 @@
         .wedding-section { display: none; }
         .wedding-section.active { display: block; animation: fadeInUp 0.5s ease; }
         .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-        .food-item { background: rgba(255,255,255,0.06); padding: 18px; border-radius: 16px; font-size: 1.1rem; transition: transform 0.3s ease; }
-        .food-item:hover { transform: scale(1.05); }
+        .food-item { background: rgba(255,255,255,0.06); padding: 18px; border-radius: 16px; font-size: 1.1rem; }
         .vip-card, .dahej-card, .talk-card { background: rgba(255,255,255,0.06); padding: 28px; border-radius: 20px; margin-bottom: 20px; }
     </style>
 </head>
@@ -76,31 +74,25 @@
     <div class="orb orb1"></div>
     <div class="orb orb2"></div>
     <div class="container">
-        <!-- Hero -->
         <div class="hero">
             <h1>ARYAN MISHRA</h1>
             <p class="subtitle">DAV Class 10’s Biggest Useless Motherfucking Asshole</p>
         </div>
 
-        <!-- Hero Photo -->
         <div style="text-align:center; margin-bottom: 60px;">
-            <img src="https://files.oaiusercontent.com/file-Kq8Cz?se=2026-04-24T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dimage.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" alt="Aryan Mishra" class="profile-photo" style="max-width:380px;height:440px;">
+            <img src="aryan.png.png" alt="Aryan" class="profile-photo" style="max-width:380px;height:440px;">
         </div>
 
-        <!-- Main Tabs -->
         <div class="tabs" id="main-tabs">
             <div class="tab active" data-tab="aryan">Aryan Mishra</div>
             <div class="tab" data-tab="father">Amarnath Mishra</div>
             <div class="tab" data-tab="mother">Nita Mishra</div>
             <div class="tab" data-tab="palak">Palak Shree (Theta)</div>
-            <div class="tab" data-tab="anjani">Anjani Kumar Singh</div>
-            <div class="tab" data-tab="laxmeshwari">Laxmeshwari</div>
-            <div class="tab" onclick="openWeddingModal()" style="background: linear-gradient(90deg,#ff3366,#ff6699); color:white;">ARYAN MISHRA WEDS PALAK SHREE (THETA) - 19 SEPTEMBER 2026</div>
+            <div class="tab" onclick="openWeddingModal()" style="background: linear-gradient(90deg,#ff3366,#ff6699); color:white;">WEDDING - 19 SEPT 2026</div>
         </div>
 
-        <!-- Aryan -->
         <div id="aryan" class="content-card active">
-            <img src="https://files.oaiusercontent.com/file-Kq8Cz?se=2026-04-24T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dimage.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" alt="Aryan Mishra" class="profile-photo">
+            <img src="aryan.png.png" class="profile-photo">
             <h2>Aryan Mishra</h2>
             <p>Aryan Mishra, the ultimate worthless piece of shit student of DAV Class 10, is a tall, lanky, spineless motherfucking asshole who deserves every single insult thrown at him. This brain-dead giraffe loves physics like a desperate simp, but physics bends him over and fucks him mercilessly every single exam. He scores so low that even the invigilator feels second-hand embarrassment. No teacher likes this useless cunt. Devashish Sir especially hates his guts and beats the living shit out of him daily.</p>
             <div class="roast-section">
@@ -111,194 +103,50 @@
                     <li>Fingering his mother’s patience until it breaks</li>
                     <li>Jerking off to the idea of scoring above 40 in Physics</li>
                     <li>Being a tall useless giraffe who only excels at disappointing everyone</li>
-                    <li>Collecting excuses thicker than his arms</li>
-                </ul>
-            </div>
-            <div class="roast-section">
-                <h3 class="roast-title">Special Skills</h3>
-                <ul class="roast-list">
-                    <li>Turning every exam into a public humiliation show</li>
-                    <li>Making Devashish Sir regret becoming a teacher</li>
-                    <li>Being the human embodiment of "Tall but No Brain"</li>
-                    <li>Disappointing his entire bloodline in one report card</li>
-                    <li>Simping for Physics while Physics brutally rejects him</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Father -->
         <div id="father" class="content-card">
-            <img src="https://files.oaiusercontent.com/file-Kq8Cz?se=2026-04-24T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dimage.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" alt="Aryan Mishra" class="profile-photo">
+            <img src="aryan.png.png" class="profile-photo">
             <h2>Amarnath Mishra</h2>
             <p>Amarnath Mishra — the brainless chamar dalit farmer who somehow created an even bigger failure. This illiterate loudmouth spends his days playing in mud and shouting useless orders while being the biggest embarrassment of the bloodline.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Farming failure instead of crops</li>
-                    <li>Roasting his son while his own life is burnt</li>
-                    <li>Shouting at family like a village tyrant with zero achievements</li>
-                    <li>Producing tall weak sons with empty skulls</li>
-                </ul>
-            </div>
         </div>
 
-        <!-- Mother -->
         <div id="mother" class="content-card">
-            <img src="https://files.oaiusercontent.com/file-Kq8Cz?se=2026-04-24T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dimage.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" alt="Aryan Mishra" class="profile-photo">
+            <img src="aryan.png.png" class="profile-photo">
             <h2>Nita Mishra</h2>
-            <p>Nita Mishra, the cock-sucking desperate bitch who lectures her son about studies while being on her knees faster than Aryan fails exams. Famous for blowjobs, handjobs and fingering sessions.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Taking cum like daily vitamins</li>
-                    <li>Nagging everyone while being the biggest hypocrite</li>
-                    <li>Feeding ghee to make her son tall and useless</li>
-                    <li>Being a royal cum-guzzling whore behind closed doors</li>
-                </ul>
-            </div>
+            <p>Nita Mishra, the cock-sucking desperate bitch who lectures her son about studies while being on her knees faster than Aryan fails exams.</p>
         </div>
 
-        <!-- Palak (Theta) -->
-        <div id="palak" class="content-card">
-            <img src="https://files.oaiusercontent.com/file-Kq8Cz?se=2026-04-24T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dimage.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" alt="Aryan Mishra" class="profile-photo" style="object-position: top;">
-            <h2>Palak Shree (Theta)</h2>
-            <p>Palak Shree — the jiggly sticky fatty-assed whore Aryan calls “Theta”. Her massive wobbling ass distracts this loser while Physics destroys him completely.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Jiggling her overripe watermelon ass everywhere</li>
-                    <li>Being the perfect distraction for a brainless tall giraffe</li>
-                    <li>Wobbling like a badly solved oscillation problem</li>
-                    <li>Sticking to Aryan like the cheap cum-dump she is</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Anjani Kumar Singh (New) -->
-        <div id="anjani" class="content-card">
-            <img src="https://files.oaiusercontent.com/file-Kq8Cz?se=2026-04-24T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dimage.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" alt="Anjani Kumar Singh" class="profile-photo">
-            <h2>Anjani Kumar Singh</h2>
-            <p>Anjani Kumar Singh — the pathetic cuck father of that jiggly whore Theta who happily sold his daughter for dahej like a cheap pimp. This motherfucker talks big but bends over faster than his daughter when money is involved.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Blowjobing rich people for better deals on his daughter’s pussy</li>
-                    <li>Selling his fatty-assed daughter for cars and crores</li>
-                    <li>Being a spineless dalal who negotiates dahej like a roadside whore</li>
-                    <li>Watching his daughter get fucked while counting cash</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Laxmeshwari (New) -->
-        <div id="laxmeshwari" class="content-card">
-            <img src="https://files.oaiusercontent.com/file-Kq8Cz?se=2026-04-24T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3Dimage.png&sig=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" alt="Laxmeshwari" class="profile-photo">
-            <h2>Laxmeshwari</h2>
-            <p>Laxmeshwari — the cock-hungry desperate bitch mother of Theta who trained her daughter to be a perfect cum-dump. This whore lectures everyone while spreading her legs for anyone who offers more dahej.</p>
-            <div class="roast-section">
-                <h3 class="roast-title">Interests & Hobbies</h3>
-                <ul class="roast-list">
-                    <li>Taking cum like daily vitamins just like her daughter</li>
-                    <li>Teaching her fatty daughter how to jiggle ass for money</li>
-                    <li>Blowjobing and handjobing dahej negotiators behind closed doors</li>
-                    <li>Being a royal cum-guzzling whore who sold her own blood</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Warning -->
         <div class="warning">
-            THE ENTIRE MISHRA FAMILY IS A CIRCUS OF FAILURES — TALL WEAK PHYSICS-FUCKED SON + CHAMAR DALIT FARMER FATHER + COCK-HUNGRY BITCH MOTHER + FATTY JIGGLY THETA GIRLFRIEND + HER PIMPS PARENTS = PERFECT DISASTER COUPLE
+            THE ENTIRE MISHRA FAMILY IS A CIRCUS OF FAILURES — TALL WEAK PHYSICS-FUCKED SON + CHAMAR DALIT FARMER FATHER + COCK-HUNGRY BITCH MOTHER
         </div>
         <div class="footer">
-            © 2026 DAV Class 10 Extreme Roasts • Powered by Pure Savage Energy &amp; Eternal Failure
+            © 2026 DAV Class 10 Extreme Roasts
         </div>
     </div>
 
-    <!-- Wedding Modal -->
     <div id="weddingModal" class="modal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeWeddingModal()">×</span>
-           
-            <h1 style="text-align:center; font-size:3rem; margin-bottom:10px;">ARYAN MISHRA WEDS PALAK SHREE (THETA)</h1>
-            <p style="text-align:center; font-size:1.6rem; color:#ffbbcc;">19 SEPTEMBER 2026</p>
-
-            <div class="wedding-tabs" id="weddingTabs">
-                <div class="wedding-tab active" onclick="showWeddingSection(0)">🍽️ Foods & Beverages</div>
-                <div class="wedding-tab" onclick="showWeddingSection(1)">👑 VIP Guests + Payments</div>
-                <div class="wedding-tab" onclick="showWeddingSection(2)">💰 DAHEJ - What Mishra Took From Theta</div>
-                <div class="wedding-tab" onclick="showWeddingSection(3)">🗣️ How Nita & Amarnath Talked To Theta’s Parents</div>
+            <h1 style="text-align:center;">ARYAN MISHRA WEDS PALAK SHREE (THETA)</h1>
+            <div class="wedding-tabs">
+                <div class="wedding-tab active" onclick="showWeddingSection(0)">🍽️ Food</div>
+                <div class="wedding-tab" onclick="showWeddingSection(1)">💰 DAHEJ</div>
             </div>
-
-            <!-- Foods Section -->
             <div id="weddingSection0" class="wedding-section active">
-                <h2 style="text-align:center; margin:30px 0 20px;">🍲 300+ Foods, Drinks & Alcoholic Delights</h2>
                 <div class="food-grid" id="foodGrid"></div>
             </div>
-
-            <!-- VIP + Payments -->
             <div id="weddingSection1" class="wedding-section">
-                <h2 style="text-align:center; margin:30px 0 20px;">👑 VIP Guests - The Real Stars of the Disaster</h2>
-                <div class="vip-card">
-                    <h3>🔥 The Pandit / Momo</h3>
-                    <p>The legendary Pandit who will ignite the sacred fire not with wood but with his massive cumshot. This man will bless the marriage by shooting ropes of holy semen onto the havan kund while Aryan watches in awe. He fucks Mishra daily and makes sure the fire never dies.<br><strong>Payment: 1 Crore Rupees cash upfront</strong></p>
-                </div>
-                <div class="vip-card">
-                    <h3>📐 The Mathematician / Ud</h3>
-                    <p>The genius who will handle all electronic sound systems, lights and projector. He fucks Mishra every night, makes him lick his thick penis clean, and then calculates how many times Aryan will fail in life. He is the official mathematician of the wedding and will fuck the groom before the first ritual.<br><strong>Payment: 10% of total Dahej</strong></p>
-                </div>
-                <div class="vip-card">
-                    <h3>🧠 The Einstein / Freak</h3>
-                    <p>Bringing luxury transportation (Forchuner + security cars) and full security team. He will personally fuck Aryan in the car on the way to the mandap and ensure no one escapes the circus. Einstein of failure management.<br><strong>Payment: 500 Bitcoins</strong></p>
-                </div>
-                <div class="vip-card">
-                    <h3>🎤 The Baccha Chor / Ansh Bhaii</h3>
-                    <p>The singer who will perform live and roast both Aryan and Theta mercilessly. He will fuck Theta on stage while singing and make Aryan watch. The ultimate entertainment for the wedding.<br><strong>Payment: Lifetime Redbull supply + Theta for 2 hours every day whenever he wants</strong></p>
-                </div>
-                <div class="vip-card">
-                    <h3>🍖 The Beti / Forchuner</h3>
-                    <p>Son of Mishra. He will manage all food arrangements and make sure every guest is well fed while he secretly fucks his own father’s new wife (Theta) in the kitchen. True heir to the family failure.<br><strong>Payment: First night with Theta + 5% of dahej</strong></p>
-                </div>
-            </div>
-
-            <!-- Dahej Section -->
-            <div id="weddingSection2" class="wedding-section">
-                <h2 style="text-align:center; margin:30px 0 20px;">💰 DAHEJ - What Aryan Mishra Took From Theta’s Family</h2>
                 <div class="dahej-card">
-                    <ul class="roast-list" style="list-style:none;">
-                        <li>1 Defender Car</li>
-                        <li>1 Crore Cash</li>
-                        <li>2 Crore worth Jewellery</li>
-                        <li>1 House worth 50 Crore</li>
-                        <li>SuperGrok Subscription for 15 years</li>
-                        <li>Furniture worth 20 Crore</li>
-                        <li>Strong Diamond Bed for nonstop sex</li>
-                        <li>40 Lakh Gaming PC</li>
-                        <li>10Gbps Internet</li>
-                        <li>1TB DDR6 RAM</li>
-                        <li>Dark Phantasy Lifetime Supply</li>
-                        <li>One more 50 Crore worth Mansion</li>
-                        <li>Lifetime Redbull Supply</li>
-                        <li>5000 Bitcoin at max price</li>
-                    </ul>
-                    <p style="margin-top:25px; color:#ffbbcc;">Total Dahej value: Fucking insane. Theta’s parents got properly milked like the cheap whores they are.</p>
-                </div>
-            </div>
-
-            <!-- Parents Talk Section -->
-            <div id="weddingSection3" class="wedding-section">
-                <h2 style="text-align:center; margin:30px 0 20px;">🗣️ How Nita & Amarnath Talked To Theta’s Parents (Anjani Kumar Singh & Laxmeshwari)</h2>
-                <div class="talk-card">
-                    <p>Nita Mishra (cock-sucking bitch): “Suniye Anjani ji, humari bahu ki chut mein itna dahej daal do ki humara beta lifetime baith ke physics fail kare. Laxmeshwari behen, teri beti ki gand itni badi hai, usko diamond bed pe chodne ke liye 50 crore ka ghar aur 5000 bitcoin de do warna shaadi cancel.”</p>
-                    <p>Amarnath Mishra (brainless farmer): “Arre Anjani Kumar, teri beti ko humare tall giraffe ke saath bech do. 100 crore dahej nahi toh teri beti ko hum nahi lenge. Laxmeshwari, teri beti roz humare bete ka lund choosegi, iske badle mein defender car aur gaming PC de do warna teri beti ki izzat khatam.”</p>
-                    <p>Anjani & Laxmeshwari (desperate): “Haan ji, le lo sab. Humari beti ki gand aur muh aapke beta ke liye hi hai. Dahej mein jo maango le lo, bas humari beti ko badi ghar ki bahu bana do.”</p>
+                    <p>1 Defender Car, 1 Crore Cash, 5000 Bitcoin... Theta’s parents got properly milked.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Tab System
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.content-card');
         tabs.forEach(tab => {
@@ -306,50 +154,33 @@
             tab.addEventListener('click', () => {
                 const targetId = tab.dataset.tab;
                 if (targetId === 'father' || targetId === 'mother') {
-                    const password = prompt("🔒 Enter Password to view this section:");
-                    if (password !== "9271") {
-                        alert("❌ Wrong password, you pervert! Try again.");
-                        return;
-                    }
+                    const password = prompt("🔒 Enter Password:");
+                    if (password !== "9271") { alert("❌ Wrong password!"); return; }
                 }
                 tabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
                 contents.forEach(c => c.classList.remove('active'));
-                const target = document.getElementById(targetId);
-                if (target) target.classList.add('active');
+                document.getElementById(targetId).classList.add('active');
             });
         });
 
-        // Wedding Modal
-        function openWeddingModal() {
-            document.getElementById('weddingModal').style.display = 'block';
-            showWeddingSection(0);
-        }
-        function closeWeddingModal() {
-            document.getElementById('weddingModal').style.display = 'none';
-        }
+        function openWeddingModal() { document.getElementById('weddingModal').style.display = 'block'; generateFoods(); }
+        function closeWeddingModal() { document.getElementById('weddingModal').style.display = 'none'; }
         function showWeddingSection(n) {
             document.querySelectorAll('.wedding-tab').forEach((t, i) => t.classList.toggle('active', i === n));
             document.querySelectorAll('.wedding-section').forEach((s, i) => s.classList.toggle('active', i === n));
         }
-
-        // Food Grid
         function generateFoods() {
             const grid = document.getElementById('foodGrid');
-            const baseFoods = ["🍛 Butter Chicken", "🍖 Tandoori Chicken", "🍝 Paneer Butter Masala", "🍲 Dal Makhani", "🍤 Prawns", "🐟 Fish Curry", "🍗 Chicken Biryani", "🍚 Veg Biryani", "🍕 Pizza", "🍔 Burger", "🍹 Mojito", "🍾 Champagne", "🍺 Beer", "🍮 Gulab Jamun", "🍨 Ice Cream"];
-            grid.innerHTML = '';
-            for (let i = 0; i < 320; i++) {
+            if (grid.innerHTML !== '') return;
+            const baseFoods = ["🍛 Butter Chicken", "🍖 Tandoori Chicken", "🍝 Paneer Butter"];
+            for (let i = 0; i < 20; i++) {
                 const item = document.createElement('div');
                 item.className = 'food-item';
-                item.innerHTML = `${baseFoods[i % baseFoods.length]} <strong>#${i+1}</strong>`;
+                item.innerHTML = `${baseFoods[i % baseFoods.length]} #${i+1}`;
                 grid.appendChild(item);
             }
         }
-
-        window.onload = function() {
-            generateFoods();
-            console.log('%cPassword for parents is 9271', 'color:#ff3366; font-size:18px;');
-        };
     </script>
 </body>
 </html>
