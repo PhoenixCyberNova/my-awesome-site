@@ -296,16 +296,17 @@
 
     <script>
         // Tab System
-     // Updated Audio Playback Function
-function playGitAudio(fileName) {
-    // This is the direct link to your raw files on GitHub
-    const githubBase = "https://raw.githubusercontent.com/phoenixcybernova/phoenixcybernova.github.io/main/";
-    const audioPath = githubBase + fileName + ".mp3"; // This makes sound1.mp3 or sound2.mp3
+   function playGitAudio(fileName) {
+    // Corrected to your actual repository name: my-awesome-site
+    const githubBase = "https://raw.githubusercontent.com/PhoenixCyberNova/my-awesome-site/main/";
+    const audioPath = githubBase + fileName + ".mp3";
+    
+    console.log("Loading from:", audioPath);
     
     const audio = new Audio(audioPath);
     audio.play().catch(err => {
         console.error("Playback error:", err);
-        alert("Still failing. Make sure the files are named exactly '" + fileName + ".mp3' and are uploaded to the 'main' branch.");
+        alert("Error! Check if the file name is correct: " + fileName);
     });
 }
         const tabs = document.querySelectorAll('.tab');
