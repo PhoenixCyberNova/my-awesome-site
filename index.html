@@ -72,6 +72,18 @@
     </style>
 </head>
 <body>
+  <div id="audio-sidebar" style="position: fixed; left: 0; top: 40%; z-index: 10001; background: var(--card); border: 2px solid var(--accent); border-radius: 0 15px 15px 0; padding: 20px; transform: translateX(-85%); transition: transform 0.3s ease; backdrop-filter: blur(15px); box-shadow: 10px 0 30px rgba(0,0,0,0.5);">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <p style="font-family: 'Space Grotesk', sans-serif; font-weight: bold; color: var(--accent2); font-size: 1rem; border-bottom: 1px solid var(--accent); padding-bottom: 5px;">🔊 PROJECT AUDIO</p>
+            <button onclick="playGitAudio('sound1')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Sound 1</button>
+            <button onclick="playGitAudio('sound2')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Rasputin</button>
+        </div>
+    </div>
+
+    <style>
+        #audio-sidebar:hover { transform: translateX(0) !important; }
+        #audio-sidebar button:hover { background: var(--accent) !important; box-shadow: 0 0 15px var(--accent); }
+    </style> 
     <div class="background"></div>
     <div class="orb orb1"></div>
     <div class="orb orb2"></div>
@@ -284,6 +296,18 @@
 
     <script>
         // Tab System
+     // GitHub Audio Playback Function
+        function playGitAudio(fileName) {
+            // IMPORTANT: Replace USERNAME and REPO with your actual GitHub details
+            const githubBase = "https://raw.githubusercontent.com/USERNAME/REPO/main/";
+            const audioPath = githubBase + fileName + ".mp3";
+            
+            const audio = new Audio(audioPath);
+            audio.play().catch(err => {
+                console.error("Playback error:", err);
+                alert("Could not load audio. Check your GitHub link or file name.");
+            });
+        }
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.content-card');
         tabs.forEach(tab => {
