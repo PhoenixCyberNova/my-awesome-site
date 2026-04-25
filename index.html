@@ -29,47 +29,6 @@
         .orb1 { width: 800px; height: 800px; background: #ff3366; top: -20%; left: -15%; }
         .orb2 { width: 1000px; height: 1000px; background: #ff6699; bottom: -30%; right: -25%; animation-delay: -18s; }
         @keyframes floatOrb { 0% { transform: translate(0,0); } 50% { transform: translate(140px, -100px); } 100% { transform: translate(0,0); } }
-
-        .syndicate-header {
-            text-align: center;
-            padding: 50px 20px 40px;
-            border-bottom: 2px solid rgba(255,51,102,0.3);
-        }
-        .syndicate-header h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 3.5rem;
-            color: white;
-            margin-bottom: 30px;
-            letter-spacing: -3px;
-        }
-        .syndicate-header img {
-            max-width: 420px;
-            border: 8px solid var(--accent);
-            border-radius: 24px;
-            box-shadow: 0 25px 70px rgba(255,51,102,0.4);
-        }
-
-        .mishra-option {
-            text-align: center;
-            margin: 40px 0 60px;
-        }
-        .mishra-btn {
-            padding: 20px 60px;
-            background: rgba(255,255,255,0.08);
-            border: 2px solid var(--accent);
-            border-radius: 50px;
-            color: var(--accent2);
-            font-size: 1.6rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.4s ease;
-        }
-        .mishra-btn:hover {
-            background: var(--accent);
-            color: white;
-            transform: scale(1.05);
-        }
-
         .container { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 30px 20px; }
         .hero { text-align: center; padding: 80px 20px 50px; }
         h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(4rem, 9vw, 7.5rem); font-weight: 900; background: linear-gradient(90deg, #fff, #ff6699, #ff3366); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -4px; }
@@ -102,34 +61,53 @@
         .food-item { background: rgba(255,255,255,0.06); padding: 18px; border-radius: 16px; font-size: 1.1rem; transition: transform 0.3s ease; }
         .food-item:hover { transform: scale(1.05); }
         .vip-card, .dahej-card, .talk-card { background: rgba(255,255,255,0.06); padding: 28px; border-radius: 20px; margin-bottom: 20px; }
-
-        #audio-sidebar {
-            position: fixed; left: 0; top: 40%; z-index: 10001; background: var(--card); border: 2px solid var(--accent); 
-            border-radius: 0 15px 15px 0; padding: 20px; transform: translateX(-85%); transition: transform 0.3s ease; 
-            backdrop-filter: blur(15px); box-shadow: 10px 0 30px rgba(0,0,0,0.5);
+        .wedding-detail-card { background: rgba(255,255,255,0.06); padding: 28px; border-radius: 20px; margin-bottom: 20px; }
+        .wedding-image-placeholder {
+            width: 100%;
+            height: 380px;
+            background: #1a1a1a;
+            border: 4px dashed var(--accent);
+            border-radius: 16px;
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff6699;
+            font-size: 1.3rem;
+            text-align: center;
         }
-        #audio-sidebar:hover { transform: translateX(0) !important; }
-        #audio-sidebar button:hover { background: var(--accent) !important; box-shadow: 0 0 15px var(--accent); }
     </style>
 </head>
 <body>
+  <div id="audio-sidebar" style="position: fixed; left: 0; top: 40%; z-index: 10001; background: var(--card); border: 2px solid var(--accent); border-radius: 0 15px 15px 0; padding: 20px; transform: translateX(-85%); transition: transform 0.3s ease; backdrop-filter: blur(15px); box-shadow: 10px 0 30px rgba(0,0,0,0.5);">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+            <p style="font-family: 'Space Grotesk', sans-serif; font-weight: bold; color: var(--accent2); font-size: 1rem; border-bottom: 1px solid var(--accent); padding-bottom: 5px;">🔊 PROJECT AUDIO</p>
+            <button onclick="playGitAudio('sound1')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Sound 1</button>
+            <button onclick="playGitAudio('sound2')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Rasputin</button>
+        </div>
+    </div>
+    <style>
+        #audio-sidebar:hover { transform: translateX(0) !important; }
+        #audio-sidebar button:hover { background: var(--accent) !important; box-shadow: 0 0 15px var(--accent); }
+    </style>
     <div class="background"></div>
     <div class="orb orb1"></div>
     <div class="orb orb2"></div>
 
-    <!-- Top Header: The King Files by Savage Syndicate -->
-    <div class="syndicate-header">
-        <h1>THE KING FILES BY SAVAGE SYNDICATE</h1>
-        <img src="savagesyndricate.jpeg" alt="Savage Syndicate">
+    <!-- King Files Header -->
+    <div style="text-align: center; padding: 50px 20px 40px; border-bottom: 2px solid rgba(255,51,102,0.3);">
+        <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 3.5rem; color: white; margin-bottom: 30px; letter-spacing: -3px;">THE KING FILES BY SAVAGE SYNDICATE</h1>
+        <img src="savagesyndricate.png" alt="Savage Syndicate" style="max-width: 420px; border: 8px solid #ff3366; border-radius: 24px; box-shadow: 0 25px 70px rgba(255,51,102,0.4);">
     </div>
 
     <!-- The Mishra Files Button -->
-    <div class="mishra-option">
-        <button class="mishra-btn" onclick="openMishraFiles()">The Mishra Files</button>
+    <div style="text-align: center; margin: 40px 0 60px;">
+        <button onclick="openMishraFiles()" style="padding: 20px 60px; background: rgba(255,255,255,0.08); border: 2px solid #ff3366; border-radius: 50px; color: #ff6699; font-size: 1.6rem; font-weight: 700; cursor: pointer; transition: all 0.4s ease;">The Mishra Files</button>
     </div>
 
-    <!-- Hidden Main Content (The Mishra Files) -->
+    <!-- Main Content - Hidden until password -->
     <div id="mishra-content" style="display: none;">
+
         <div class="container">
             <div class="hero">
                 <h1>ARYAN MISHRA</h1>
@@ -148,6 +126,7 @@
                 <div class="tab" onclick="openWeddingModal()" style="background: linear-gradient(90deg,#ff3366,#ff6699); color:white;">ARYAN MISHRA WEDS PALAK SHREE (THETA) - 19 SEPTEMBER 2026</div>
             </div>
 
+            <!-- Aryan -->
             <div id="aryan" class="content-card active">
                 <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo">
                 <h2>Aryan Mishra</h2>
@@ -175,6 +154,7 @@
                 </div>
             </div>
 
+            <!-- Father -->
             <div id="father" class="content-card">
                 <img src="amarnathmishra.png.png" alt="Amarnath Mishra" class="profile-photo">
                 <h2>Amarnath Mishra</h2>
@@ -190,6 +170,7 @@
                 </div>
             </div>
 
+            <!-- Mother -->
             <div id="mother" class="content-card">
                 <img src="nitamishra.png.png" alt="Nita Mishra" class="profile-photo">
                 <h2>Nita Mishra</h2>
@@ -205,6 +186,7 @@
                 </div>
             </div>
 
+            <!-- Palak -->
             <div id="palak" class="content-card">
                 <img src="palakshree.png.png" alt="Palak Shree (Theta)" class="profile-photo" style="object-position: top;">
                 <h2>Palak Shree (Theta)</h2>
@@ -220,6 +202,7 @@
                 </div>
             </div>
 
+            <!-- Anjani -->
             <div id="anjani" class="content-card">
                 <img src="anjanikumarsingh.png.png" alt="Anjani Kumar Singh" class="profile-photo">
                 <h2>Anjani Kumar Singh</h2>
@@ -235,6 +218,7 @@
                 </div>
             </div>
 
+            <!-- Laxmeshwari -->
             <div id="laxmeshwari" class="content-card">
                 <img src="laxmeshwari.png.png" alt="Laxmeshwari" class="profile-photo">
                 <h2>Laxmeshwari</h2>
@@ -259,16 +243,7 @@
         </div>
     </div>
 
-    <!-- Audio Sidebar -->
-    <div id="audio-sidebar">
-        <div style="display: flex; flex-direction: column; gap: 12px;">
-            <p style="font-family: 'Space Grotesk', sans-serif; font-weight: bold; color: var(--accent2); font-size: 1rem; border-bottom: 1px solid var(--accent); padding-bottom: 5px;">🔊 PROJECT AUDIO</p>
-            <button onclick="playGitAudio('sound1')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Sound 1</button>
-            <button onclick="playGitAudio('sound2')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Rasputin</button>
-        </div>
-    </div>
-
-    <!-- Wedding Modal (exactly as original) -->
+    <!-- Wedding Modal -->
     <div id="weddingModal" class="modal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeWeddingModal()">×</span>
@@ -280,11 +255,16 @@
                 <div class="wedding-tab" onclick="showWeddingSection(1)">👑 VIP Guests + Payments</div>
                 <div class="wedding-tab" onclick="showWeddingSection(2)">💰 DAHEJ - What Mishra Took From Theta</div>
                 <div class="wedding-tab" onclick="showWeddingSection(3)">🗣️ How Nita & Amarnath Talked To Theta’s Parents</div>
+                <div class="wedding-tab" onclick="showWeddingSection(4)">💒 Full Mishra Wedding Details</div>
             </div>
+
+            <!-- Original Section 0: Foods -->
             <div id="weddingSection0" class="wedding-section active">
                 <h2 style="text-align:center; margin:30px 0 20px;">🍲 300+ Foods, Drinks & Alcoholic Delights</h2>
                 <div class="food-grid" id="foodGrid"></div>
             </div>
+
+            <!-- Original Section 1: VIP -->
             <div id="weddingSection1" class="wedding-section">
                 <h2 style="text-align:center; margin:30px 0 20px;">👑 VIP Guests - The Real Stars of the Disaster</h2>
                 <div class="vip-card">
@@ -308,6 +288,8 @@
                     <p>Son of Mishra. He will manage all food arrangements and make sure every guest is well fed while he secretly fucks his own father’s new wife (Theta) in the kitchen. True heir to the family failure.<br><strong>Payment: First night with Theta + 5% of dahej</strong></p>
                 </div>
             </div>
+
+            <!-- Original Section 2: Dahej -->
             <div id="weddingSection2" class="wedding-section">
                 <h2 style="text-align:center; margin:30px 0 20px;">💰 DAHEJ - What Aryan Mishra Took From Theta’s Family</h2>
                 <div class="dahej-card">
@@ -330,12 +312,42 @@
                     <p style="margin-top:25px; color:#ffbbcc;">Total Dahej value: Fucking insane. Theta’s parents got properly milked like the cheap whores they are.</p>
                 </div>
             </div>
+
+            <!-- Original Section 3: Talk -->
             <div id="weddingSection3" class="wedding-section">
                 <h2 style="text-align:center; margin:30px 0 20px;">🗣️ How Nita & Amarnath Talked To Theta’s Parents (Anjani Kumar Singh & Laxmeshwari)</h2>
                 <div class="talk-card">
                     <p>Nita Mishra (cock-sucking bitch): “Suniye Anjani ji, humari bahu ki chut mein itna dahej daal do ki humara beta lifetime baith ke physics fail kare. Laxmeshwari behen, teri beti ki gand itni badi hai, usko diamond bed pe chodne ke liye 50 crore ka ghar aur 5000 bitcoin de do warna shaadi cancel.”</p>
                     <p>Amarnath Mishra (brainless farmer): “Arre Anjani Kumar, teri beti ko humares tall giraffe ke saath bech do. 100 crore dahej nahi toh teri beti ko hum nahi lenge. Laxmeshwari, teri beti roz humare bete ka lund choosegi, iske badle mein defender car aur gaming PC de do warna teri beti ki izzat khatam.”</p>
                     <p>Anjani & Laxmeshwari (desperate): “Haan ji, le lo sab. Humari beti ki gand aur muh aapke beta ke liye hi hai. Dahej mein jo maango le lo, bas humari beti ko badi ghar ki bahu bana do.”</p>
+                </div>
+            </div>
+
+            <!-- New 5th Section: Full Mishra Wedding Details -->
+            <div id="weddingSection4" class="wedding-section">
+                <div class="wedding-detail-card">
+                    <h2 style="text-align:center; color:#ff6699; margin-bottom:25px;">📍 LOCATION OF MISHRA WEDDING</h2>
+                    <p style="text-align:center; font-size:1.5rem; color:white;">The Emerald Hotel & Siya Milan Banquets, Manjhaulia Road, Muzaffarpur, Bihar</p>
+                    
+                    <div class="wedding-image-placeholder">
+                        PHOTO OF THE EMERALD HOTEL<br>
+                        (theemeraldhotel.jpeg)
+                    </div>
+
+                    <h3 style="margin:30px 0 15px; color:#ffbbcc;">🚗 MODE OF TRANSPORT - THE AMBASSADOR CAR</h3>
+                    <p>Aryan Mishra and his jiggly sticky whore Palak Shree (Theta) will travel to the mandap in the classic black Ambassador car. Inside the car, this tall weak physics-failed giraffe will fuck his fatty-assed bride hardcore. Theta’s massive wobbling ass will bounce violently on Aryan’s tiny useless dick while the old car shakes like it’s having an earthquake. She will moan like a badly solved wave equation, screaming “harder you useless motherfucker” while Aryan wheezes and fails even at sex. The windows will be completely fogged up from their sweaty, desperate, sticky hardcore sex. The driver will hear everything and laugh at how pathetic the groom is. Perfect beginning for their lifetime of failure.</p>
+
+                    <h3 style="margin:30px 0 15px; color:#ffbbcc;">💒 OTHER SAVAGE WEDDING HIGHLIGHTS</h3>
+                    <ul class="roast-list">
+                        <li>The mandap will be decorated with NCERT books and failure garlands.</li>
+                        <li>Devashish Sir will personally beat Aryan if he forgets any ritual.</li>
+                        <li>Nita Mishra will cry about “hamari izzat” while looking for fresh cock at the reception.</li>
+                        <li>Amarnath will keep shouting “beta padh lo” even during the pheras.</li>
+                        <li>Palak’s huge jiggling ass will cause a traffic jam when she walks down the aisle.</li>
+                        <li>The whole wedding will be recorded so future generations can learn what a disaster looks like.</li>
+                        <li>Food will be served while guests openly roast the tall giraffe and his cum-dump bride.</li>
+                    </ul>
+                    <p style="margin-top:40px; text-align:center; font-size:1.45rem; color:#ff4444;">This will be the most roasted, abused, and memorable wedding failure in the history of Muzaffarpur.</p>
                 </div>
             </div>
         </div>
@@ -352,7 +364,7 @@
             });
         }
 
-        // Open The Mishra Files with password 1729
+        // Open Mishra Files with password 1729
         function openMishraFiles() {
             const password = prompt("🔒 Enter Password to access The Mishra Files:");
             if (password === "1729") {
@@ -363,7 +375,7 @@
             }
         }
 
-        // Tab System (for father/mother password remains 9271)
+        // Tab System
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.content-card');
         tabs.forEach(tab => {
@@ -385,7 +397,7 @@
             });
         });
 
-        // Wedding Modal Functions
+        // Wedding Modal
         function openWeddingModal() {
             document.getElementById('weddingModal').style.display = 'block';
             showWeddingSection(0);
@@ -398,10 +410,10 @@
             document.querySelectorAll('.wedding-section').forEach((s, i) => s.classList.toggle('active', i === n));
         }
 
-        // Food Grid (fixed repetition with more variety)
+        // Food Grid - Fixed repetition
         function generateFoods() {
             const grid = document.getElementById('foodGrid');
-            const baseFoods = ["🍛 Butter Chicken", "🍖 Tandoori Chicken", "🍝 Paneer Butter Masala", "🍲 Dal Makhani", "🍤 Prawns", "🐟 Fish Curry", "🍗 Chicken Biryani", "🍚 Veg Biryani", "🍕 Pizza", "🍔 Burger", "🍹 Mojito", "🍾 Champagne", "🍺 Beer", "🍮 Gulab Jamun", "🍨 Ice Cream", "🍛 Rogan Josh", "🍖 Seekh Kebab", "🍝 Kadai Paneer", "🍲 Chole Bhature", "🍗 Mutton Biryani"];
+            const baseFoods = ["🍛 Butter Chicken", "🍖 Tandoori Chicken", "🍝 Paneer Butter Masala", "🍲 Dal Makhani", "🍤 Prawns", "🐟 Fish Curry", "🍗 Chicken Biryani", "🍚 Veg Biryani", "🍕 Pizza", "🍔 Burger", "🍹 Mojito", "🍾 Champagne", "🍺 Beer", "🍮 Gulab Jamun", "🍨 Ice Cream"];
             grid.innerHTML = '';
             for (let i = 0; i < 320; i++) {
                 const item = document.createElement('div');
@@ -413,7 +425,7 @@
 
         window.onload = function() {
             generateFoods();
-            console.log('%cMishra Files password: 1729 | Parents sections password: 9271', 'color:#ff3366; font-size:18px;');
+            console.log('%cMishra Files password is 1729 | Parents sections password is 9271', 'color:#ff3366; font-size:18px;');
         };
     </script>
 </body>
