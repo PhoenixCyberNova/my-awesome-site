@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aryan Mishra - DAV Class 10’s Biggest Useless Motherfucking Asshole</title>
+    <title>Savage Syndicate - The King Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #0b0b14;
+            --sidebar-bg: #141626;
             --accent: #ff3366;
             --accent2: #ff6699;
             --text: #f8f9ff;
@@ -17,12 +18,55 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
-            overflow-x: hidden;
+            display: flex;
             min-height: 100vh;
         }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: var(--sidebar-bg);
+            border-right: 2px solid rgba(255, 51, 102, 0.2);
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+            position: fixed;
+            height: 100vh;
+        }
+        .sidebar h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 50px;
+            color: var(--accent);
+            text-align: center;
+        }
+        .nav-tab {
+            padding: 18px 24px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .nav-tab:hover, .nav-tab.active {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 10px 20px rgba(255, 51, 102, 0.3);
+        }
+
+        /* Main Content Area */
+        .main-container {
+            margin-left: 280px;
+            flex-grow: 1;
+            padding: 40px;
+            position: relative;
+        }
+
+        /* Your original styles (kept 100%) */
         .background { position: fixed; inset: 0; z-index: -2; background: radial-gradient(circle at 30% 20%, rgba(255,51,102,0.25) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(255,102,153,0.22) 0%, transparent 55%); animation: bgShift 30s ease infinite; }
         @keyframes bgShift { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
         .orb { position: fixed; border-radius: 50%; filter: blur(100px); opacity: 0.13; z-index: -1; animation: floatOrb 40s linear infinite; }
@@ -48,6 +92,7 @@
         .roast-list li::before { content: "🔥"; position: absolute; left: 0; color: var(--accent); font-size: 1.4rem; }
         .warning { background: linear-gradient(135deg, rgba(255,51,102,0.18), rgba(255,102,153,0.12)); border: 3px solid var(--accent); padding: 50px; border-radius: 28px; text-align: center; font-size: 1.55rem; line-height: 1.8; margin: 80px 0; color: #ffbbcc; }
         .footer { text-align: center; padding: 100px 20px 60px; color: #555577; font-size: 1.15rem; }
+
         /* Modal */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; overflow-y: auto; }
         .modal-content { max-width: 1100px; margin: 40px auto; background: var(--card); border-radius: var(--radius); padding: 40px; position: relative; }
@@ -60,8 +105,7 @@
         .food-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
         .food-item { background: rgba(255,255,255,0.06); padding: 18px; border-radius: 16px; font-size: 1.1rem; transition: transform 0.3s ease; }
         .food-item:hover { transform: scale(1.05); }
-        .vip-card, .dahej-card, .talk-card { background: rgba(255,255,255,0.06); padding: 28px; border-radius: 20px; margin-bottom: 20px; }
-        .wedding-detail-card { background: rgba(255,255,255,0.06); padding: 28px; border-radius: 20px; margin-bottom: 20px; }
+        .vip-card, .dahej-card, .talk-card, .wedding-detail-card { background: rgba(255,255,255,0.06); padding: 28px; border-radius: 20px; margin-bottom: 20px; }
         .wedding-image-placeholder {
             width: 100%;
             height: 380px;
@@ -79,171 +123,173 @@
     </style>
 </head>
 <body>
-  <div id="audio-sidebar" style="position: fixed; left: 0; top: 40%; z-index: 10001; background: var(--card); border: 2px solid var(--accent); border-radius: 0 15px 15px 0; padding: 20px; transform: translateX(-85%); transition: transform 0.3s ease; backdrop-filter: blur(15px); box-shadow: 10px 0 30px rgba(0,0,0,0.5);">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Savage Syndicate</h2>
+        <div class="nav-tab active" onclick="showSection('home')">Home</div>
+        <div class="nav-tab" onclick="showSection('mishra-files')">The Mishra Files</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Home Tab -->
+        <div id="home" class="section active">
+            <div style="text-align: center; padding: 80px 20px;">
+                <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 4rem; background: linear-gradient(90deg, #fff, #ff6699, #ff3366); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 40px;">THE KING WEBSITE BY SAVAGE SYNDRICATE</h1>
+                <img src="savagesyndricate.jpeg" alt="Savage Syndicate" style="max-width: 600px; border-radius: 28px; box-shadow: 0 0 50px rgba(255, 51, 102, 0.3);">
+            </div>
+        </div>
+
+        <!-- Mishra Files Tab (password protected) -->
+        <div id="mishra-files" class="section" style="display: none;">
+            <div id="mishra-content">
+                <div class="container">
+                    <div class="hero">
+                        <h1>ARYAN MISHRA</h1>
+                        <p class="subtitle">DAV Class 10’s Biggest Useless Motherfucking Asshole</p>
+                    </div>
+                    <div style="text-align:center; margin-bottom: 60px;">
+                        <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo" style="max-width:380px;height:440px;">
+                    </div>
+                    <div class="tabs" id="main-tabs">
+                        <div class="tab active" data-tab="aryan">Aryan Mishra</div>
+                        <div class="tab" data-tab="father">Amarnath Mishra</div>
+                        <div class="tab" data-tab="mother">Nita Mishra</div>
+                        <div class="tab" data-tab="palak">Palak Shree (Theta)</div>
+                        <div class="tab" data-tab="anjani">Anjani Kumar Singh</div>
+                        <div class="tab" data-tab="laxmeshwari">Laxmeshwari</div>
+                        <div class="tab" onclick="openWeddingModal()" style="background: linear-gradient(90deg,#ff3366,#ff6699); color:white;">ARYAN MISHRA WEDS PALAK SHREE (THETA) - 19 SEPTEMBER 2026</div>
+                    </div>
+
+                    <!-- Aryan -->
+                    <div id="aryan" class="content-card active">
+                        <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo">
+                        <h2>Aryan Mishra</h2>
+                        <p>Aryan Mishra, the ultimate worthless piece of shit student of DAV Class 10, is a tall, lanky, spineless motherfucking asshole who deserves every single insult thrown at him. This brain-dead giraffe loves physics like a desperate simp, but physics bends him over and fucks him mercilessly every single exam. He scores so low that even the invigilator feels second-hand embarrassment. No teacher likes this useless cunt. Devashish Sir especially hates his guts and beats the living shit out of him daily.</p>
+                        <div class="roast-section">
+                            <h3 class="roast-title">Interests & Hobbies</h3>
+                            <ul class="roast-list">
+                                <li>Self-sucking his own tiny ego while pretending to study Physics</li>
+                                <li>Blowjobing his own failure every time he opens NCERT</li>
+                                <li>Fingering his mother’s patience until it breaks</li>
+                                <li>Jerking off to the idea of scoring above 40 in Physics</li>
+                                <li>Being a tall useless giraffe who only excels at disappointing everyone</li>
+                                <li>Collecting excuses thicker than his arms</li>
+                            </ul>
+                        </div>
+                        <div class="roast-section">
+                            <h3 class="roast-title">Special Skills</h3>
+                            <ul class="roast-list">
+                                <li>Turning every exam into a public humiliation show</li>
+                                <li>Making Devashish Sir regret becoming a teacher</li>
+                                <li>Being the human embodiment of "Tall but No Brain"</li>
+                                <li>Disappointing his entire bloodline in one report card</li>
+                                <li>Simping for Physics while Physics brutally rejects him</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Father -->
+                    <div id="father" class="content-card">
+                        <img src="amarnathmishra.png.png" alt="Amarnath Mishra" class="profile-photo">
+                        <h2>Amarnath Mishra</h2>
+                        <p>Amarnath Mishra — the brainless chamar dalit farmer who somehow created an even bigger failure. This illiterate loudmouth spends his days playing in mud and shouting useless orders while being the biggest embarrassment of the bloodline.</p>
+                        <div class="roast-section">
+                            <h3 class="roast-title">Interests & Hobbies</h3>
+                            <ul class="roast-list">
+                                <li>Farming failure instead of crops</li>
+                                <li>Roasting his son while his own life is burnt</li>
+                                <li>Shouting at family like a village tyrant with zero achievements</li>
+                                <li>Producing tall weak sons with empty skulls</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mother -->
+                    <div id="mother" class="content-card">
+                        <img src="nitamishra.png.png" alt="Nita Mishra" class="profile-photo">
+                        <h2>Nita Mishra</h2>
+                        <p>Nita Mishra, the cock-sucking desperate bitch who lectures her son about studies while being on her knees faster than Aryan fails exams. Famous for blowjobs, handjobs and fingering sessions.</p>
+                        <div class="roast-section">
+                            <h3 class="roast-title">Interests & Hobbies</h3>
+                            <ul class="roast-list">
+                                <li>Taking cum like daily vitamins</li>
+                                <li>Nagging everyone while being the biggest hypocrite</li>
+                                <li>Feeding ghee to make her son tall and useless</li>
+                                <li>Being a royal cum-guzzling whore behind closed doors</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Palak -->
+                    <div id="palak" class="content-card">
+                        <img src="palakshree.png.png" alt="Palak Shree (Theta)" class="profile-photo" style="object-position: top;">
+                        <h2>Palak Shree (Theta)</h2>
+                        <p>Palak Shree — the jiggly sticky fatty-assed whore Aryan calls “Theta”. Her massive wobbling ass distracts this loser while Physics destroys him completely.</p>
+                        <div class="roast-section">
+                            <h3 class="roast-title">Interests & Hobbies</h3>
+                            <ul class="roast-list">
+                                <li>Jiggling her overripe watermelon ass everywhere</li>
+                                <li>Being the perfect distraction for a brainless tall giraffe</li>
+                                <li>Wobbling like a badly solved oscillation problem</li>
+                                <li>Sticking to Aryan like the cheap cum-dump she is</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Anjani -->
+                    <div id="anjani" class="content-card">
+                        <img src="anjanikumarsingh.png.png" alt="Anjani Kumar Singh" class="profile-photo">
+                        <h2>Anjani Kumar Singh</h2>
+                        <p>Anjani Kumar Singh — the pathetic cuck father of that jiggly whore Theta who happily sold his daughter for dahej like a cheap pimp. This motherfucker talks big but bends over faster than his daughter when money is involved.</p>
+                        <div class="roast-section">
+                            <h3 class="roast-title">Interests & Hobbies</h3>
+                            <ul class="roast-list">
+                                <li>Blowjobing rich people for better deals on his daughter’s pussy</li>
+                                <li>Selling his fatty-assed daughter for cars and crores</li>
+                                <li>Being a spineless dalal who negotiates dahej like a roadside whore</li>
+                                <li>Watching his daughter get fucked while counting cash</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Laxmeshwari -->
+                    <div id="laxmeshwari" class="content-card">
+                        <img src="laxmeshwari.png.png" alt="Laxmeshwari" class="profile-photo">
+                        <h2>Laxmeshwari</h2>
+                        <p>Laxmeshwari — the cock-hungry desperate bitch mother of Theta who trained her daughter to be a perfect cum-dump. This whore lectures everyone while spreading her legs for anyone who offers more dahej.</p>
+                        <div class="roast-section">
+                            <h3 class="roast-title">Interests & Hobbies</h3>
+                            <ul class="roast-list">
+                                <li>Taking cum like daily vitamins just like her daughter</li>
+                                <li>Teaching her fatty daughter how to jiggle ass for money</li>
+                                <li>Blowjobing and handjobing dahej negotiators behind closed doors</li>
+                                <li>Being a royal cum-guzzling whore who sold her own blood</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="warning">
+                        THE ENTIRE MISHRA FAMILY IS A CIRCUS OF FAILURES — TALL WEAK PHYSICS-FUCKED SON + CHAMAR DALIT FARMER FATHER + COCK-HUNGRY BITCH MOTHER + FATTY JIGGLY THETA GIRLFRIEND + HER PIMPS PARENTS = PERFECT DISASTER COUPLE
+                    </div>
+                    <div class="footer">
+                        © 2026 DAV Class 10 Extreme Roasts • Powered by Pure Savage Energy &amp; Eternal Failure
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Sidebar -->
+    <div id="audio-sidebar" style="position: fixed; left: 0; top: 40%; z-index: 10001; background: var(--card); border: 2px solid var(--accent); border-radius: 0 15px 15px 0; padding: 20px; transform: translateX(-85%); transition: transform 0.3s ease; backdrop-filter: blur(15px); box-shadow: 10px 0 30px rgba(0,0,0,0.5);">
         <div style="display: flex; flex-direction: column; gap: 12px;">
             <p style="font-family: 'Space Grotesk', sans-serif; font-weight: bold; color: var(--accent2); font-size: 1rem; border-bottom: 1px solid var(--accent); padding-bottom: 5px;">🔊 PROJECT AUDIO</p>
             <button onclick="playGitAudio('sound1')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Sound 1</button>
             <button onclick="playGitAudio('sound2')" style="padding: 10px; cursor: pointer; background: rgba(255,255,255,0.05); border: 1px solid var(--accent); color: white; border-radius: 8px; font-weight: 600; transition: 0.2s;">Play Rasputin</button>
         </div>
     </div>
-    <style>
-        #audio-sidebar:hover { transform: translateX(0) !important; }
-        #audio-sidebar button:hover { background: var(--accent) !important; box-shadow: 0 0 15px var(--accent); }
-    </style>
-    <div class="background"></div>
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
 
-    <!-- King Files Header -->
-    <div style="text-align: center; padding: 50px 20px 40px; border-bottom: 2px solid rgba(255,51,102,0.3);">
-        <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 3.5rem; color: white; margin-bottom: 30px; letter-spacing: -3px;">THE KING FILES BY SAVAGE SYNDICATE</h1>
-        <img src="savagesyndricate.jpeg" alt="Savage Syndicate" style="max-width: 420px; border: 8px solid #ff3366; border-radius: 24px; box-shadow: 0 25px 70px rgba(255,51,102,0.4);">
-    </div>
-
-    <!-- The Mishra Files Button -->
-    <div style="text-align: center; margin: 40px 0 60px;">
-        <button onclick="openMishraFiles()" style="padding: 20px 60px; background: rgba(255,255,255,0.08); border: 2px solid #ff3366; border-radius: 50px; color: #ff6699; font-size: 1.6rem; font-weight: 700; cursor: pointer; transition: all 0.4s ease;">The Mishra Files</button>
-    </div>
-
-    <!-- Main Content - Hidden until password -->
-    <div id="mishra-content" style="display: none;">
-
-        <div class="container">
-            <div class="hero">
-                <h1>ARYAN MISHRA</h1>
-                <p class="subtitle">DAV Class 10’s Biggest Useless Motherfucking Asshole</p>
-            </div>
-            <div style="text-align:center; margin-bottom: 60px;">
-                <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo" style="max-width:380px;height:440px;">
-            </div>
-            <div class="tabs" id="main-tabs">
-                <div class="tab active" data-tab="aryan">Aryan Mishra</div>
-                <div class="tab" data-tab="father">Amarnath Mishra</div>
-                <div class="tab" data-tab="mother">Nita Mishra</div>
-                <div class="tab" data-tab="palak">Palak Shree (Theta)</div>
-                <div class="tab" data-tab="anjani">Anjani Kumar Singh</div>
-                <div class="tab" data-tab="laxmeshwari">Laxmeshwari</div>
-                <div class="tab" onclick="openWeddingModal()" style="background: linear-gradient(90deg,#ff3366,#ff6699); color:white;">ARYAN MISHRA WEDS PALAK SHREE (THETA) - 19 SEPTEMBER 2026</div>
-            </div>
-
-            <!-- Aryan -->
-            <div id="aryan" class="content-card active">
-                <img src="aryan.png.png" alt="Aryan Mishra" class="profile-photo">
-                <h2>Aryan Mishra</h2>
-                <p>Aryan Mishra, the ultimate worthless piece of shit student of DAV Class 10, is a tall, lanky, spineless motherfucking asshole who deserves every single insult thrown at him. This brain-dead giraffe loves physics like a desperate simp, but physics bends him over and fucks him mercilessly every single exam. He scores so low that even the invigilator feels second-hand embarrassment. No teacher likes this useless cunt. Devashish Sir especially hates his guts and beats the living shit out of him daily.</p>
-                <div class="roast-section">
-                    <h3 class="roast-title">Interests & Hobbies</h3>
-                    <ul class="roast-list">
-                        <li>Self-sucking his own tiny ego while pretending to study Physics</li>
-                        <li>Blowjobing his own failure every time he opens NCERT</li>
-                        <li>Fingering his mother’s patience until it breaks</li>
-                        <li>Jerking off to the idea of scoring above 40 in Physics</li>
-                        <li>Being a tall useless giraffe who only excels at disappointing everyone</li>
-                        <li>Collecting excuses thicker than his arms</li>
-                    </ul>
-                </div>
-                <div class="roast-section">
-                    <h3 class="roast-title">Special Skills</h3>
-                    <ul class="roast-list">
-                        <li>Turning every exam into a public humiliation show</li>
-                        <li>Making Devashish Sir regret becoming a teacher</li>
-                        <li>Being the human embodiment of "Tall but No Brain"</li>
-                        <li>Disappointing his entire bloodline in one report card</li>
-                        <li>Simping for Physics while Physics brutally rejects him</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Father -->
-            <div id="father" class="content-card">
-                <img src="amarnathmishra.png.png" alt="Amarnath Mishra" class="profile-photo">
-                <h2>Amarnath Mishra</h2>
-                <p>Amarnath Mishra — the brainless chamar dalit farmer who somehow created an even bigger failure. This illiterate loudmouth spends his days playing in mud and shouting useless orders while being the biggest embarrassment of the bloodline.</p>
-                <div class="roast-section">
-                    <h3 class="roast-title">Interests & Hobbies</h3>
-                    <ul class="roast-list">
-                        <li>Farming failure instead of crops</li>
-                        <li>Roasting his son while his own life is burnt</li>
-                        <li>Shouting at family like a village tyrant with zero achievements</li>
-                        <li>Producing tall weak sons with empty skulls</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Mother -->
-            <div id="mother" class="content-card">
-                <img src="nitamishra.png.png" alt="Nita Mishra" class="profile-photo">
-                <h2>Nita Mishra</h2>
-                <p>Nita Mishra, the cock-sucking desperate bitch who lectures her son about studies while being on her knees faster than Aryan fails exams. Famous for blowjobs, handjobs and fingering sessions.</p>
-                <div class="roast-section">
-                    <h3 class="roast-title">Interests & Hobbies</h3>
-                    <ul class="roast-list">
-                        <li>Taking cum like daily vitamins</li>
-                        <li>Nagging everyone while being the biggest hypocrite</li>
-                        <li>Feeding ghee to make her son tall and useless</li>
-                        <li>Being a royal cum-guzzling whore behind closed doors</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Palak -->
-            <div id="palak" class="content-card">
-                <img src="palakshree.png.png" alt="Palak Shree (Theta)" class="profile-photo" style="object-position: top;">
-                <h2>Palak Shree (Theta)</h2>
-                <p>Palak Shree — the jiggly sticky fatty-assed whore Aryan calls “Theta”. Her massive wobbling ass distracts this loser while Physics destroys him completely.</p>
-                <div class="roast-section">
-                    <h3 class="roast-title">Interests & Hobbies</h3>
-                    <ul class="roast-list">
-                        <li>Jiggling her overripe watermelon ass everywhere</li>
-                        <li>Being the perfect distraction for a brainless tall giraffe</li>
-                        <li>Wobbling like a badly solved oscillation problem</li>
-                        <li>Sticking to Aryan like the cheap cum-dump she is</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Anjani -->
-            <div id="anjani" class="content-card">
-                <img src="anjanikumarsingh.png.png" alt="Anjani Kumar Singh" class="profile-photo">
-                <h2>Anjani Kumar Singh</h2>
-                <p>Anjani Kumar Singh — the pathetic cuck father of that jiggly whore Theta who happily sold his daughter for dahej like a cheap pimp. This motherfucker talks big but bends over faster than his daughter when money is involved.</p>
-                <div class="roast-section">
-                    <h3 class="roast-title">Interests & Hobbies</h3>
-                    <ul class="roast-list">
-                        <li>Blowjobing rich people for better deals on his daughter’s pussy</li>
-                        <li>Selling his fatty-assed daughter for cars and crores</li>
-                        <li>Being a spineless dalal who negotiates dahej like a roadside whore</li>
-                        <li>Watching his daughter get fucked while counting cash</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Laxmeshwari -->
-            <div id="laxmeshwari" class="content-card">
-                <img src="laxmeshwari.png.png" alt="Laxmeshwari" class="profile-photo">
-                <h2>Laxmeshwari</h2>
-                <p>Laxmeshwari — the cock-hungry desperate bitch mother of Theta who trained her daughter to be a perfect cum-dump. This whore lectures everyone while spreading her legs for anyone who offers more dahej.</p>
-                <div class="roast-section">
-                    <h3 class="roast-title">Interests & Hobbies</h3>
-                    <ul class="roast-list">
-                        <li>Taking cum like daily vitamins just like her daughter</li>
-                        <li>Teaching her fatty daughter how to jiggle ass for money</li>
-                        <li>Blowjobing and handjobing dahej negotiators behind closed doors</li>
-                        <li>Being a royal cum-guzzling whore who sold her own blood</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="warning">
-                THE ENTIRE MISHRA FAMILY IS A CIRCUS OF FAILURES — TALL WEAK PHYSICS-FUCKED SON + CHAMAR DALIT FARMER FATHER + COCK-HUNGRY BITCH MOTHER + FATTY JIGGLY THETA GIRLFRIEND + HER PIMPS PARENTS = PERFECT DISASTER COUPLE
-            </div>
-            <div class="footer">
-                © 2026 DAV Class 10 Extreme Roasts • Powered by Pure Savage Energy &amp; Eternal Failure
-            </div>
-        </div>
-    </div>
-
-    <!-- Wedding Modal -->
+    <!-- Wedding Modal with 5th tab -->
     <div id="weddingModal" class="modal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeWeddingModal()">×</span>
@@ -258,13 +304,13 @@
                 <div class="wedding-tab" onclick="showWeddingSection(4)">💒 Full Mishra Wedding Details</div>
             </div>
 
-            <!-- Original Section 0: Foods -->
+            <!-- Foods -->
             <div id="weddingSection0" class="wedding-section active">
                 <h2 style="text-align:center; margin:30px 0 20px;">🍲 300+ Foods, Drinks & Alcoholic Delights</h2>
                 <div class="food-grid" id="foodGrid"></div>
             </div>
 
-            <!-- Original Section 1: VIP -->
+            <!-- VIP -->
             <div id="weddingSection1" class="wedding-section">
                 <h2 style="text-align:center; margin:30px 0 20px;">👑 VIP Guests - The Real Stars of the Disaster</h2>
                 <div class="vip-card">
@@ -289,7 +335,7 @@
                 </div>
             </div>
 
-            <!-- Original Section 2: Dahej -->
+            <!-- Dahej -->
             <div id="weddingSection2" class="wedding-section">
                 <h2 style="text-align:center; margin:30px 0 20px;">💰 DAHEJ - What Aryan Mishra Took From Theta’s Family</h2>
                 <div class="dahej-card">
@@ -313,7 +359,7 @@
                 </div>
             </div>
 
-            <!-- Original Section 3: Talk -->
+            <!-- Talk -->
             <div id="weddingSection3" class="wedding-section">
                 <h2 style="text-align:center; margin:30px 0 20px;">🗣️ How Nita & Amarnath Talked To Theta’s Parents (Anjani Kumar Singh & Laxmeshwari)</h2>
                 <div class="talk-card">
@@ -323,7 +369,7 @@
                 </div>
             </div>
 
-            <!-- New 5th Section: Full Mishra Wedding Details -->
+            <!-- 5th Tab: Full Wedding Details -->
             <div id="weddingSection4" class="wedding-section">
                 <div class="wedding-detail-card">
                     <h2 style="text-align:center; color:#ff6699; margin-bottom:25px;">📍 LOCATION OF MISHRA WEDDING</h2>
@@ -354,24 +400,25 @@
     </div>
 
     <script>
-        function playGitAudio(fileName) {
-            const githubBase = "https://raw.githubusercontent.com/PhoenixCyberNova/my-awesome-site/main/";
-            const audioPath = githubBase + fileName + ".mp3";
-            const audio = new Audio(audioPath);
-            audio.play().catch(err => {
-                console.error("Playback error:", err);
-                alert("Error! Check if the file name is correct: " + fileName);
-            });
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+
+            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            if (sectionId === 'mishra-files') {
+                openMishraFiles();
+            }
         }
 
-        // Open Mishra Files with password 1729
         function openMishraFiles() {
             const password = prompt("🔒 Enter Password to access The Mishra Files:");
             if (password === "1729") {
-                document.getElementById('mishra-content').style.display = 'block';
-                alert("✅ Access Granted. Welcome to The Mishra Files 🔥");
+                // Already shown by showSection
             } else {
                 alert("❌ Wrong password! Try again.");
+                showSection('home');
             }
         }
 
@@ -410,7 +457,7 @@
             document.querySelectorAll('.wedding-section').forEach((s, i) => s.classList.toggle('active', i === n));
         }
 
-        // Food Grid - Fixed repetition
+        // Food Grid
         function generateFoods() {
             const grid = document.getElementById('foodGrid');
             const baseFoods = ["🍛 Butter Chicken", "🍖 Tandoori Chicken", "🍝 Paneer Butter Masala", "🍲 Dal Makhani", "🍤 Prawns", "🐟 Fish Curry", "🍗 Chicken Biryani", "🍚 Veg Biryani", "🍕 Pizza", "🍔 Burger", "🍹 Mojito", "🍾 Champagne", "🍺 Beer", "🍮 Gulab Jamun", "🍨 Ice Cream"];
@@ -421,6 +468,17 @@
                 item.innerHTML = `${baseFoods[i % baseFoods.length]} <strong>#${i+1}</strong>`;
                 grid.appendChild(item);
             }
+        }
+
+        // Audio
+        function playGitAudio(fileName) {
+            const githubBase = "https://raw.githubusercontent.com/PhoenixCyberNova/my-awesome-site/main/";
+            const audioPath = githubBase + fileName + ".mp3";
+            const audio = new Audio(audioPath);
+            audio.play().catch(err => {
+                console.error("Playback error:", err);
+                alert("Error! Check if the file name is correct: " + fileName);
+            });
         }
 
         window.onload = function() {
